@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 title: Cmfive
 description: An Open Source Modular MVC PHP Framework
+
+remote_theme: andrewbanchich/forty-jekyll-theme
