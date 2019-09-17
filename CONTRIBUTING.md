@@ -1,3 +1,6 @@
+<!-- 
+@TODO: Replace with Cmfive contributing requirements
+
 All contributions, including merge requests, feature requests, ideas, design tweaks, etc. are welcome. 
 I welcome all input, from sharing your own implementations of code to general thoughts and ideas. Just open a new issue!
 
@@ -12,4 +15,4 @@ If you encounter any issues with these themes on any devices, please submit a bu
 the issue that you're encountering is.
 <br /><br />
 
-*Thank you*
+*Thank you* -->
