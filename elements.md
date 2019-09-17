@@ -2,17 +2,19 @@
 layout: page
 title: Elements
 nav-menu: true
+disabled: true
+show_tile: false
 ---
 
 <!-- Main -->
-<div id="main" class="alt">
+<!-- <div id="main" class="alt"> -->
 
 <!-- One -->
-<section id="one">
+<!-- <section id="one">
 	<div class="inner">
 		<header class="major">
 			<h1>Elements</h1>
-		</header>
+		</header> -->
 
 <!-- Content -->
 <h2 id="content">Sample Content</h2>
@@ -404,7 +406,7 @@ print 'It took ' + i + ' iterations to sort the deck.';
 </div>
 </div>
 
-</div>
+<!-- </div>
 </section>
 
-</div>
+</div> -->
