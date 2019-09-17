@@ -2,7 +2,7 @@
 title: Cmfive
 subtitle: An open source modular MVC PHP framework
 description: Supported by 2pi Software
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/cmfive-docs" # the subpath of your site, e.g. /blog
 # url: # the base hostname & protocol for your site
 
 # homepage tiles
