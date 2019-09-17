@@ -1,6 +1,16 @@
 ---
 title: Getting started
+layout: page
 ---
+
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>Getting started</h1>
+		</header>
 
 ## Requirements
 
@@ -43,3 +53,7 @@ Running through commands 1-4 will get you set up and ready to go. Here is an exp
 2. Will install all Cmfive migrations
 3. Will set up an administrator user, needed to log in to a new Cmfive install
 4. Will generate encryption keys used by Cmfive
+
+</div>
+</section>
+</div>
