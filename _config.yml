@@ -26,3 +26,7 @@ markdown: kramdown
 
 sass:
   style: compressed
+
+collections:
+  doc_pages:
+    output: true
