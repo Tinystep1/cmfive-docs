@@ -1,6 +1,7 @@
 ---
 title: Getting started
 layout: page
+type: doc
 ---
 
 ## Requirements

@@ -78,3 +78,52 @@
 	@import 'layout/footer';
 	@import 'layout/wrapper';
 	@import 'layout/menu';
+
+// Accordion styles
+ul {
+    &.accordion {
+        list-style-type: none;
+        padding: 0px; 
+
+        & > li {
+            // font-size: 120%;
+            padding: 5px 10px;
+            font-weight: bold;
+            margin: 2px;
+
+            & + ul {
+                transition: all 0.2s;
+                display: none;
+                
+                & > li {
+                    padding: 0px;
+                    font-size: 16px;
+                    background-color: _palette(bg);
+                    color: white;
+                    
+                    & > a {
+                        padding: 5px 10px;
+                        width: 100%;
+                        display: block;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: _palette(border-bg);
+                    }
+                }
+            }
+
+            &.active {
+                border: 2px solid white;
+                margin: 0px;
+                background-color: white;
+                color: _palette(bg);
+
+                & + ul {
+                    display: block;
+                }
+            }
+        }
+    }
+}

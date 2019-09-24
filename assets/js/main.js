@@ -346,7 +346,17 @@
 							$menu._hide();
 
 				});
+        
+        // Accordion
+        $('.accordion > li').click(function(event) {
+            $('.accordion > li').each(function(index) {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                }
+            });
 
+            $(this).addClass('active');
+        })
 	});
 
 })(jQuery);
