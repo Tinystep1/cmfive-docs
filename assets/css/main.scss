@@ -91,6 +91,14 @@ ul {
             font-weight: bold;
             margin: 2px;
 
+            &:hover {
+                border: 2px solid white;
+                margin: 0px;
+                background-color: white;
+                color: _palette(bg);
+                cursor: pointer;
+            }
+
             & + ul {
                 transition: all 0.2s;
                 display: none;
@@ -119,6 +127,11 @@ ul {
                 margin: 0px;
                 background-color: white;
                 color: _palette(bg);
+
+                &:hover {
+                    background-color: _palette(bg);
+                    color: white;
+                }
 
                 & + ul {
                     display: block;
