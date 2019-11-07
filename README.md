@@ -13,6 +13,16 @@ and [creating pages](https://jekyllrb.com/docs/pages/).
 - **GitLab**: Simply fork this repository and start editing the `_config.yml` file!  
 - **GitHub**: Fork this repository and create a branch named `gh-pages`, then start editing the `_config.yml` file.
 
+## Starting Jekyll locally
+
+The config requires SSL be set up, you can comment out that line, or use [mkcert](https://github.com/FiloSottile/mkcert) to generate a local SSL cert then reference them when you launch Jekyll: 
+
+```
+$ jekyll serve --ssl-key=localhost-key.pem --ssl-cert=localhost.pem --trace --config=_config.yml,_config_development.yml
+```
+
+When launching, it's important to specify the ```--config``` option with reference to the ```_config_development.yml``` in addition to the base ```_config.yml``` file. This stops Jekyll setting the base URL to https://cmfive.com.
+
 # Added Features
 
 * **[Formspree.io](https://formspree.io/) contact form integration** - just add your email to the `_config.yml` and it works!
