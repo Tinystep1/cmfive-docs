@@ -24,6 +24,12 @@ tiles-count: 6
 
 # build settings
 markdown: kramdown
+  # syntax_highlighter_opts:
+  #   disable : true
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+#highlighter: rouge
 
 sass:
   style: compressed
