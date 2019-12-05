@@ -13,35 +13,14 @@
             <header class="major">
                 <h1>{{ page.landing-title }}</h1>
             </header>
-            <div class="content">
+            <div class="content" style="padding-top: 50px; float: right;">
                 <p style="text-transform: uppercase;">{{ site.description }}</p>
                 <ul class="actions">
-                    <li><a href="{{ "/doc_pages/getting-started.html" | absolute_url }}" class="button next scrolly">Get Started</a></li>
+                    <li><a href="{{ "/doc_pages/getting-started.html" | absolute_url }}" class="button next scrolly">Documentation</a></li>
                 </ul>
             </div>
         </div>
     </section>
-
-    <!-- Main -->
-    <div id="main">
-
-        <!-- One -->
-        {% include tiles.html %}
-
-        <!-- Two -->
-        <!-- <section id="two">
-            <div class="inner">
-                <header class="major">
-                    <h2>Have a look</h2>
-                </header>
-                <p>{{ content }}</p>
-                <ul class="actions">
-                    <li><a href="landing.html" class="button next">Get Started</a></li>
-                </ul>
-            </div>
-        </section> -->
-
-    </div>
 
     {% include footer.html %}
 

@@ -63,7 +63,8 @@
 				width: auto;
 
 				> :first-child {
-					width: auto;
+                    width: auto;
+                    text-align: right;
 
 					&:after {
 						max-width: 100%;

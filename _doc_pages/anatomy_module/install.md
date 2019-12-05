@@ -38,10 +38,6 @@ public function description()
 ```
 This function should return either a string or null. The description is displayed on the migrations page in cmfive.
 
-<!-- # Database Seeds
-
-Coming soon -->
-
 # Tutorial
 
 Let's add a migration to our example module.<br />
