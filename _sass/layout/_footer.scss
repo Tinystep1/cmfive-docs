@@ -7,6 +7,9 @@
 /* Footer */
 
 	#footer {
+		.inner{
+			padding: 20px 0px 0px 0px!important;
+		}
 		.copyright {
 			font-size: 0.8em;
 			list-style: none;
@@ -30,7 +33,7 @@
 
 		@include breakpoint(xsmall) {
 			.copyright {
-				li {
+				li { 
 					display: block;
 					border-left: 0;
 					margin-left: 0;

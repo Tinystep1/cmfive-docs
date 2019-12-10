@@ -72,6 +72,17 @@
 			padding-right: 4.5em;
 			position: relative;
 
+			&.scrolly:hover{
+				background: white;
+				color: #242943!important;
+				border:none;
+				box-shadow:none;
+
+				&:after{
+					filter: brightness(17%);
+				}
+			}
+
 			&:before, &:after {
 				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
 				background-position: center right;
