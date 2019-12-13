@@ -1,0 +1,31 @@
+# Layout for docs menu
+
+- name: "Installation"
+  children:
+    - name: "Getting Started"
+      link: "/tutorials/getting-started"
+    - name: "Installation"
+      link: "/tutorials/installation"
+- name: "Learning Cmfive"
+  children:
+    - name: "Introduction"
+      link: "/tutorials/anatomy_module/introduction"
+    - name: "Actions"
+      link: "/tutorials/anatomy_module/actions"
+    - name: "Assets"
+      link: "/"
+    - name: "Install"
+      link: "/tutorials/anatomy_module/install"
+    - name: "Models"
+      link: "/tutorials/anatomy_module/models"
+    - name: "Partials"
+      link: "/"
+    - name: "Templates"
+      link: "/tutorials/anatomy_module/templates"
+    - name: "Config"
+      link: "/tutorials/anatomy_module/config"
+    - name: "Hooks"
+      link: "/"
+    - name: "Roles"
+      link: "/"
+

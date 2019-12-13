@@ -35,5 +35,7 @@ sass:
   style: compressed
 
 collections:
-  doc_pages:
+  documentation:
+    output: true
+  tutorials:
     output: true
