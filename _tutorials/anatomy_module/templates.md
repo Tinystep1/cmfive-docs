@@ -1,7 +1,7 @@
 ---
 title: Templates
 layout: page
-type: doc
+type: tute
 ---
 
 ## Templates

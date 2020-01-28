@@ -1,7 +1,7 @@
 ---
 title: Models
 layout: page
-type: doc
+type: tute
 ---
 
 # Models

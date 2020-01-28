@@ -1,7 +1,7 @@
 ---
 title: Config
 layout: page
-type: doc
+type: tute
 ---
 
 # config.php

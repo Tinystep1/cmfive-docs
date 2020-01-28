@@ -1,7 +1,7 @@
 ---
 title: Install
 layout: page
-type: doc
+type: tute
 ---
 
 # Install

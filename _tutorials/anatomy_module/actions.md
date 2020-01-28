@@ -114,19 +114,21 @@ function index_ALL(Web $w) {
     // build the table array adding the headers and the row data
     $table = [];
     $tableHeaders = ['Name','Checked','Date Started','Number','Actions'];
-    foreach ($exampleItems as $item) {
-        $row = [];
-        // add values to the row in the same order as the table headers
-        $row[] = $item->name;
-        $row[] = $item->is_checked ? 'Yes' : 'No';
-        $row[] = formatDate($item->dt_started);
-        $row[] = $item->my_integer;
-        // the actions column is used to hold buttons that link to actions per item. Note the item id is added to the href on these buttons.
-        $actions = [];
-        $actions[] = Html::b('/example-item/edit/' . $item->id,'Edit Item');
-        $actions[] = Html::b('/example-item/delete/' . $item->id, 'Delete', 'Are you sure you want to delete this item?');
-        $row[] = implode('',$actions);
-        $table[] = $row;
+    if (!empty($exampleItems)) {  // only loop if we have one or more items
+        foreach ($exampleItems as $item) { // loop through each item
+            $row = [];
+            // add values to the row in the same order as the table headers
+            $row[] = $item->name;
+            $row[] = $item->is_checked ? 'Yes' : 'No';
+            $row[] = formatDate($item->dt_started);
+            $row[] = $item->my_integer;
+            // the actions column is used to hold buttons that link to actions per item. Note the item id is added to the href on these buttons.
+            $actions = [];
+            $actions[] = Html::b('/example-item/edit/' . $item->id,'Edit Item');
+            $actions[] = Html::b('/example-item/delete/' . $item->id, 'Delete', 'Are you sure you want to delete this item?');
+            $row[] = implode('',$actions);
+            $table[] = $row;
+        }
     }
 
     //send the table to the template using ctx
@@ -138,20 +140,26 @@ To view the table we need to add it to the index action template file. For detai
 ## Tutorial Part 3
 
 If we click the 'Edit Item' button on one of our items in the table we go to the item edit action. However this action currently only creates new items. If you look at the URL you will see that the button has appended the item's id number. It's time to modify our edit action so that it looks for an item id in the URL and loads the existing item for editing or if no id is given it creates a new item. <br/>
-The following code block shows wich lines need to be modified in both the GET and POST edit functions.
+The following code block shows which lines need to be modified in both the GET and POST edit functions.
 ```diff
 function edit_GET(Web $w) {
 
-    //add a title to the action
-    $w->ctx('title','Add new item');
-
++   // we now need to check if we are creating a new item or editing an existing one
++   // we will use pathMatch to retrieve an item id from the url.
 +   $p = $w->pathMatch('id');
++   // if the id exists we will retrieve the data for that item otherwise we will create a new item. 
 +   $item = !empty($p['id']) ? $w->Example->getItemForId($p['id']) : new ExampleItem($w);
+
+    //add a title to the action
++   // change the title to reflect editing or adding a new item
++   $w->ctx('title', !empty($p['id']) ? 'Edit item' : 'Add new item');
+-   $w->ctx('title','Add new item');
     
     // this array is the form deffinition
     $formData = [
         'Item Data' =>[ // this is a form section title
             [ // each array on this level represents a row on the form. This row has only a single input.
++               // We now need to change the value for each field to reflect the values of the item we are editing. 
 +               ['Name','text','name',$item->name], // this if the input field definition. [Label, type, name, value]
 -               ['Name','text','name',''],      // this if the input field definition. [Label, type, name, value]
             ],
@@ -166,6 +174,7 @@ function edit_GET(Web $w) {
         ]
     ];
 
++   // If we are editing an existing item we need to send the id to the post method.
 +   if (!empty($p['id'])) {
 +       $postUrl = '/example-item/edit/' . $item->id;
 +   } else {
@@ -180,6 +189,7 @@ function edit_GET(Web $w) {
 ```diff
 function edit_POST(Web $w) {
 
++   // As in the GET method we need to check if we are editing an existing item.
 +   $p = $w->pathMatch('id');
 +   $item = !empty($p['id']) ? $w->Example->getItemForId($p['id']) : new ExampleItem($w);
 -   //create a new example item object
@@ -197,4 +207,34 @@ function edit_POST(Web $w) {
     // the msg (message) function redirects with a message box
     $w->msg('Item Saved', '/example');
 }
+```
+We can now make changes to our existing items. Test this by changing some of the values of the items in your list.
+
+Our next task will be to create the delete action that will remove items from our list. <br>
+Create a new file in actions/item called delete.php and add the following code.
+```php
+<?php
+
+function delete_ALL(Web $w) {
+
+    // start by finding the item id included in the URL
+    $p = $w->pathMatch('id');
+    // check to see if the id has been found
+    if (empty($p['id'])) {
+        // if no id found use the 'error' function to redirect the use to a safe page and display a message.
+        $w->error('No id found for item','example');
+    }
+    // use the id to retrieve the item
+    $item = $w->Example->getItemForId($p['id']);
+    // check to see if the item was found
+    if (empty($item)) {
+        // no item found so let the user know
+        $w->error('No item found for id','example');
+    }
+    // delete the item
+    $item->delete();
+    // redirect the user back to the item list with a message
+    $w->msg('Item deleted','example');
+}
+
 ```
