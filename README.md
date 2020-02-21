@@ -8,10 +8,10 @@ Now using Github pages powered by Jekyll
 Features:
  - All documentation can be truly open source - just like Cmfive
  - The site is only comprised of static components (HTML, CSS, JS) with no dynamic parts
-        The advantage of this is that there are minial security risks
+      - The advantage of this is that there are minial security risks
  - Hosting backed by Github
- - Versions of documents are maintained 
-		Can be mapped to different versions of Cmfive through the use of branches
+ - Versions of documents are maintained
+      - Can be mapped to different versions of Cmfive through the use of branches
  - Editing documentation is much easier to do via the use of pull requests
  - Ongoing effort to update all of the Cmfive documentation and migrate it to this new set up
 
