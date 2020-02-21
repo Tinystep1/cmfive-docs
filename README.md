@@ -1,3 +1,41 @@
+--------------------------------------------------
+# The Cmfive site refresh
+--------------------------------------------------
+
+Now using Github pages powered by Jekyll
+(Commenced 2019)
+
+Features:
+    All documentation can be truly open source - just like Cmfive
+    The site is only comprised of static components (HTML, CSS, JS) with no dynamic parts
+        The advantage of this is that there are minial security risks
+    Hosting backed by Github
+    Versions of documents are maintained 
+		Can be mapped to different versions of Cmfive through the use of branches
+    Editing documentation is much easier to do via the use of pull requests
+	Ongoing effort to update all of the Cmfive documentation and migrate it to this new set up
+
+--------------------------------------------------
+
+--------------------------------------------------
+# To host this Jekyll repository locally with Docker:
+--------------------------------------------------
+
+ - install Docker including Docker-Compose (at least version 2.1)
+ - clone-or-pull this repository into a local file directory
+ - from your local file directory, run "Win" or "Lin" versions of:
+   - DockerRun / DockerQuit / DockerRemove
+   - Will start, stop, and revoke the Jekyll_Docker service
+   - eg: './DockerRunLin' from bash or 'DockerRunWin' from cmd 
+ - aim your browser at 'https://localhost:4000/' to see pages served 
+   - (you will likely need to let your browser accept the self signed cert.)
+
+--------------------------------------------------
+
+--------------------------------------------------
+# General notes on Jekyll framework / implementation
+--------------------------------------------------
+
 # Forty - Jekyll Theme
 
 A Jekyll version of the "Forty" theme by [HTML5 UP](https://html5up.net/).  

@@ -1,0 +1,1 @@
+docker-compose rm jekyll -s -f -v 
