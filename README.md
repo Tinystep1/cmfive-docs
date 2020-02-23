@@ -14,6 +14,7 @@ Features:
    - Can be mapped to different versions of Cmfive through the use of branches
  - Editing documentation is much easier to do via the use of pull requests
  - Ongoing effort to update all of the Cmfive documentation and migrate it to this new set up
+ - Support for local page development with Docker site hosting
 
 --------------------------------------------------
 
@@ -22,13 +23,19 @@ Features:
 --------------------------------------------------
 
  - install Docker including Docker-Compose (at least version 2.1)
- - clone-or-pull this repository into a local file directory
- - from your local file directory, run "Win" or "Lin" versions of:
-   - DockerRun / DockerQuit / DockerRemove
-   - Will start, stop, and revoke the Jekyll_Docker service
-   - eg: './DockerRunLin' from bash or 'DockerRunWin' from cmd 
- - aim your browser at 'https://localhost:4000/' to see pages served 
+ - clone-or-pull-or-download this repository into a local file directory
+
+ - from your local file directory, run:
+   - To serve pages locally with auto redirection: docker-compose up jekyll tlsproxy
+   - To quit: docker-compose down
+   - To build with fixed URL's for deployment: docker-compose up builddocs
+   - To serve strictly on localhost:4000 via https: docker-compose up jekyll 
+
+ - aim your browser at 'localhost' to see pages served
    - (you will likely need to let your browser accept the self signed cert.)
+
+ - note: "docker-compose up" without specifying services will not work:
+   - Jekyll cannot both build URL's and serve locally at the same time!
 
 --------------------------------------------------
 
