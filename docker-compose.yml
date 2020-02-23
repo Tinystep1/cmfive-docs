@@ -95,8 +95,9 @@ services:
     image: nginx:1-alpine
     hostname: tlsproxy  
     ports:
-      - '80:80'
-      - '443:443'
+      - '4001:4001'
+    ##  - '80:80'
+    ##  - '443:443'
     networks:
       app_net:
         ipv4_address: 172.16.238.11

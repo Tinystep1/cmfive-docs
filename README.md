@@ -26,13 +26,13 @@ Features:
  - clone-or-pull-or-download this repository into a local file directory
 
  - from your local file directory, run:
-   - To serve pages locally with auto redirection: docker-compose up jekyll tlsproxy
+   - To serve pages locally with https redirection: docker-compose up jekyll tlsproxy
+      - aim your browser at 'localhost:4001' to see pages served
    - To quit: docker-compose down
    - To build with fixed URL's for deployment: docker-compose up builddocs
    - To serve strictly on localhost:4000 via https: docker-compose up jekyll 
-
- - aim your browser at 'localhost' to see pages served
    - (you will likely need to let your browser accept the self signed cert.)
+
 
  - note: "docker-compose up" without specifying services will not work:
    - Jekyll cannot both build URL's and serve locally at the same time!
