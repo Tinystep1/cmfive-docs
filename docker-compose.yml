@@ -46,8 +46,8 @@ services:
   jekyll:
     image: jekyll/jekyll
     hostname: jekyll  
-    ports:
-      - '4000:4000'
+    #ports:
+      #- '4000:4000'
     networks:
       app_net:
         ipv4_address: 172.16.238.10
@@ -96,8 +96,7 @@ services:
     hostname: tlsproxy  
     ports:
       - '4001:4001'
-    ##  - '80:80'
-    ##  - '443:443'
+      - '4002:4002'
     networks:
       app_net:
         ipv4_address: 172.16.238.11

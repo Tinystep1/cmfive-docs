@@ -26,16 +26,20 @@ Features:
  - clone-or-pull-or-download this repository into a local file directory
 
  - from your local file directory, run:
-   - To serve pages locally with https redirection: docker-compose up jekyll tlsproxy
-      - aim your browser at 'localhost:4001' to see pages served
-   - To quit: docker-compose down
-   - To build with fixed URL's for deployment: docker-compose up builddocs
-   - To serve strictly on localhost:4000 via https: docker-compose up jekyll 
-   - (you will likely need to let your browser accept the self signed cert.)
+   - To **serve** pages locally: docker-compose up jekyll tlsproxy
+      - aim your browser at 'localhost:4001' to test pages by http
+      - aim your browser at 'https://localhost:4002' to test by https
+	     - let your browser accept the self signed cert.
+   - To **quit**: docker-compose down
+   - To **build** with fixed URL's for deployment: docker-compose up builddocs
 
-
- - note: "docker-compose up" without specifying services will not work:
-   - Jekyll cannot both build URL's and serve locally at the same time!
+ - note: 
+   - "docker-compose up" without specifying services will not work:
+      - Jekyll cannot both build domain URL's and serve locally at the same time!
+   - "docker-compose up jekyll" can work alone, but only exposes http:4000 to the docker app_net 	  
+   - alternate configurations can be made by declaring new services in "docker-compose.override.yml" 
+      - eg: "myjekyll" per the command line example in general notes below
+	  - then: docker-compose up myjekyll
 
 --------------------------------------------------
 
@@ -60,10 +64,10 @@ and [creating pages](https://jekyllrb.com/docs/pages/).
 
 ## Starting Jekyll locally
 
-The config requires SSL be set up, you can comment out that line, or use [mkcert](https://github.com/FiloSottile/mkcert) to generate a local SSL cert then reference them when you launch Jekyll: 
+The config requires SSL be set up, you can comment out that line, or use [mkcert](https://github.com/FiloSottile/mkcert) to generate a local SSL cert then reference them, [with your own PATH_TO_] when you launch Jekyll: 
 
 ```
-$ jekyll serve --ssl-key=localhost-key.pem --ssl-cert=localhost.pem --trace --config=_config.yml,_config_development.yml
+$ jekyll serve --ssl-key [PATH_TO_localhost-key].pem --ssl-cert [PATH_TO_localhost].pem --trace --config=_config.yml,_config_development.yml
 ```
 
 When launching, it's important to specify the ```--config``` option with reference to the ```_config_development.yml``` in addition to the base ```_config.yml``` file. This stops Jekyll setting the base URL to https://cmfive.com.
