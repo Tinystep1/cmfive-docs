@@ -1,0 +1,7 @@
+# Layout for cmfive_core menu
+
+- name: "Core"
+  children:
+      - name: Technical
+        link:
+          

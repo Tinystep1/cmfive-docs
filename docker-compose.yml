@@ -52,7 +52,7 @@ services:
       app_net:
         ipv4_address: 172.16.238.10
 
-    command: jekyll ${JEKYLL_EXEC}
+    command: jekyll ${JEKYLL_EXEC} ${JEKYLL_CONF_EXEC}
     volumes:
       - ${JEKYLL_PATH}:/srv/jekyll:rw${MOUNT_OPTIONS}
       - jekyll-bundles:/usr/local/bundle:rw${MOUNT_OPTIONS}
@@ -74,7 +74,7 @@ services:
     image: jekyll/jekyll
     hostname: builder  
 
-    command: jekyll ${JEKYLL_BUILD}
+    command: jekyll ${JEKYLL_BUILD} ${JEKYLL_CONF_EXEC}
     volumes:
       - ${JEKYLL_PATH}:/srv/jekyll:rw${MOUNT_OPTIONS}
       - jekyll-bundles:/usr/local/bundle:rw${MOUNT_OPTIONS}

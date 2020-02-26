@@ -4,7 +4,7 @@ layout: page
 type: tute
 ---
 
-## Introduction
+## Introducing modules
 
 Cmfive modules consist of a fixed stucture and are located in the boilerplate modules folder.
 To get started you can either create a module repository directly in the cmfive-boilerplate/modules folder or create a symbolic link to your external module repository.

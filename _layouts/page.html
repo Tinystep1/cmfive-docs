@@ -25,11 +25,18 @@
                                     </ul>
                                 {% endfor %}
                             </ul>
-                            {% if page.type == "doc" %}
-                                <a href="/tutorials/getting-started">Check out the tutorials</a>
-                            {% else if page.type == "tute" %}
-                                <a href="/documentation/getting-started">Check out the documentation</a>
-                            {% endif %}
+                            <div>
+                                {% if page.type == "tute" %}
+                                    <a href="/documentation/getting-started">Check out the documentation</a>
+                                {% else if page.type %}
+                                    <a href="/tutorials/getting-started">Check out the tutorials</a>
+                                {% endif %}
+                            </div>
+                            <div>
+                                {% if page.typeof == "doc" %}
+                                <a href="/documentation/getting-started">Return to documentation</a>
+                                {% endif %}
+                            </div>
                         </div>
                         <div class="9u 12u$(small)">
                 {% endif %}
