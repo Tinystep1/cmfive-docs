@@ -1,0 +1,15 @@
+# Layout for cmfive_test menu
+
+- name: "Testing"
+  children:
+      - name: Install Codeception
+        link:
+      - name: Selenium Setup
+        link:
+      - name: Enable Tests
+        link:
+      - name: Running Tests
+        link:
+      - name: Writing Tests
+        link:
+          

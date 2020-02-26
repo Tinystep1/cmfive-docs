@@ -17,4 +17,4 @@
     - name: "Core Modules"
       link: "/documentation/core_modules/introduction"
     - name: "Cmfive Tests"
-      link: "/documenation/tests/introduction"
+      link: "/documentation/cmfive_tests/introduction"
