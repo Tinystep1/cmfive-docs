@@ -2,17 +2,17 @@
 
 - name: "Installation"
   children:
-    - name: "Getting Started"
-      link: "/documentation/getting-started"
+    - name: "Requirements"
+      link: "/documentation/requirements"
     - name: "Installation"
       link: "/documentation/installation"
 - name: "The Anatomy of Cmfive"
   children:
-    - name: "The boilerplate"
+    - name: "The Boilerplate"
       link: "/documentation/cmfive_boilerplate/introduction"
-    - name: "The Cmfive core"
+    - name: "The Cmfive Core"
       link: "/documentation/cmfive_core/introduction"
-    - name: "Module overview"
+    - name: "Module Overview"
       link: "/tutorials/anatomy_module/introduction"
     - name: "Core Modules"
       link: "/documentation/core_modules/introduction"

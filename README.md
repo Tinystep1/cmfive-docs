@@ -38,8 +38,9 @@ Features:
       - Jekyll cannot both build domain URL's and serve locally at the same time!
    - "docker-compose up jekyll" can work alone, but only exposes http:4000 to the docker app_net 	  
    - alternate configurations can be made by declaring new services in "docker-compose.override.yml" 
-      - eg: "myjekyll" per the command line example in general notes below
-	  - then: docker-compose up myjekyll
+      - eg: uncomment example "httpsjekyll" which is declared per the command line example in general notes below
+	  - then: docker-compose up httpsjekyll
+	  - serves only https on localhost:4000, useful to check action of absolute links by site URL
 
 --------------------------------------------------
 

@@ -2,7 +2,7 @@
 
 - name: "Installation"
   children:
-    - name: "Getting Started"
+    - name: "Requirements"
       link: "/tutorials/getting-started"
     - name: "Installation"
       link: "/tutorials/installation"

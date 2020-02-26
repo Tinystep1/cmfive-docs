@@ -4,20 +4,12 @@ layout: page
 type: doc
 ---
 
-## Requirements
+## Cmfive (cm5)
 
-Cmfive v2 requires PHP7.0.x and MySQL 5.5+
 
-Cmfive works best with Linux and works out of the box with the Apache web server. Cmfive can also work with Windows and other web servers (like IIS and Nginx) but may require additional configuration.
+Cmfive
+ – an open source Business Application framework (ERP, CRM, MIS)
 
-Cmfive requires the following PHP extensions:
-- CLI
-- CURL
-- GD
-- JSON
-- MBString
-- MySQL
-- Readline
-- XML
-- ZIP
+Cmfive is a ready to go, open source system that supports data capture and workflow integration between multiple business units or departments in any organisation.  Designed to work with custom and off-the-shelf ERP, CRM and MIS systems, Cmfive is the perfect tool to tackle challenging integrations between non-communicating business systems, or, to engineer an entirely new module or extension of an existing IT platform.
+
 
