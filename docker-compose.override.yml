@@ -19,7 +19,7 @@ version: '2.1'
 # #           app_net:
 # #             ipv4_address: 172.16.238.20
     
-# #         command: "jekyll serve --ssl-key ./assets/hostconfig/localhost-key.pem --ssl-cert ./assets/hostconfig/localhost.pem --trace --config assets/jekyllconfig/_config.yml,assets/jekyllconfig/_config_development.yml"
+# #         command: "jekyll serve --ssl-key ./assets/hostconfig/localhost-key.pem --ssl-cert ./assets/hostconfig/localhost.pem --trace --config _config.yml,assets/jekyllconfig/_config_development.yml"
 # #         volumes:
 # #           - ${JEKYLL_PATH}:/srv/jekyll:rw${MOUNT_OPTIONS}
 # #           - jekyll-bundles:/usr/local/bundle:rw${MOUNT_OPTIONS}
