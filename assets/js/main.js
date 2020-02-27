@@ -349,13 +349,16 @@
         
         // Accordion
         $('.accordion > li').click(function(event) {
+			var popped = $(this).hasClass('active');
             $('.accordion > li').each(function(index) {
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('active');
                 }
             });
 
-            $(this).addClass('active');
+            if(!popped) {
+				$(this).addClass('active');
+			}
         })
 	});
 
