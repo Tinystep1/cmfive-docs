@@ -69,26 +69,6 @@ services:
   # End of custom Docker image
   
  
-# Custom setup for Docker image here:
-  builddocs:
-    image: jekyll/jekyll
-    hostname: builder  
-
-    command: jekyll ${JEKYLL_BUILD} ${JEKYLL_CONF_EXEC}
-    volumes:
-      - ${JEKYLL_PATH}:/srv/jekyll:rw${MOUNT_OPTIONS}
-      - jekyll-bundles:/usr/local/bundle:rw${MOUNT_OPTIONS}
-      
-    environment:
-      ##
-      ## Debug/Logging
-      ##
-      - DEBUG_ENTRYPOINT=${DEBUG_COMPOSE_ENTRYPOINT}
-      - DEBUG_COMPOSE_ENTRYPOINT
-      - DOCKER_LOGS
-        
-  # End of custom Docker image
-  
   
 # Custom setup for Docker image here:
   tlsproxy:

@@ -22,25 +22,26 @@ Features:
 # To host this Jekyll repository locally with Docker:
 --------------------------------------------------
 
- - install Docker including Docker-Compose (at least version 2.1)
- - clone-or-pull-or-download this repository into a local file directory
+ - Install Docker including Docker-Compose (at least version 2.1). Install VSCode & MS "Docker for Visual Studio Code" for easy Docker control without CLI.
+ - Clone-or-pull-or-download this repository into a local file directory
+ - Add your repsoitory to a VSCode workspace, then apply Docker up/down/restart using context menu options by right-click on "docker-compose.yml"
 
- - from your local file directory, run:
-   - To **serve** pages locally: docker-compose up jekyll tlsproxy
+ - or, from your local file directory, run "docker-compose up jekyll tlsproxy", and to quit run "docker-compose down"
+
+ 
+	  - The jekyll & tlsproxy services will **serve** pages locally  
       - aim your browser at 'localhost:4001' to test pages by http
       - aim your browser at 'https://localhost:4002' to test by https
 	     - let your browser accept the self signed cert.
-   - To **quit**: docker-compose down
-   - To **build** with fixed URL's for deployment: docker-compose up builddocs
 
- - note: 
-   - "docker-compose up" without specifying services will not work:
-      - Jekyll cannot both build domain URL's and serve locally at the same time!
-   - "docker-compose up jekyll" can work alone, but only exposes http:4000 to the docker app_net 	  
-   - alternate configurations can be made by declaring new services in "docker-compose.override.yml" 
-      - eg: uncomment example "httpsjekyll" which is declared per the command line example in general notes below
-	  - then: docker-compose up httpsjekyll
-	  - serves only https on localhost:4000, useful to check action of absolute links by site URL
+ - note:
+	- "docker-compose up jekyll" can work alone, but exposes http:4000 only to Docker "doc_app_net" 	  
+	- alternate configurations can be made by declaring new services in "docker-compose.override.yml" 
+		- eg: uncomment example "httpsjekyll" which is declared per the command line example in general notes below
+		- then: docker-compose up httpsjekyll
+		- serves only https on localhost:4000, useful to check action of absolute links by site URL
+		- or: uncomment example "builddocs" to **build** with fixed URL's for deployment
+		- then:  docker-compose up builddocs
 
 --------------------------------------------------
 

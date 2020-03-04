@@ -1,13 +1,17 @@
 # Layout for cmfive_test menu
 
-- name: "Testing"
+- name: "Cmfive Tests"
   children:
+      - name: "Introduction"
+        link: "/documentation/cmfive_tests/introduction"
       - name: Install Codeception
-        link:
+        link: "/documentation/cmfive_tests/installcodecept"
       - name: Selenium Setup
-        link:
+        link: "/documentation/cmfive_tests/installselenium"
+      - name: WebDriver Setup
+        link: "/documentation/cmfive_tests/configwebdriver"
       - name: Enable Tests
-        link:
+        link: "/documentation/cmfive_tests/enabletests"
       - name: Running Tests
         link:
       - name: Writing Tests

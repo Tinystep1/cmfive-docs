@@ -14,7 +14,53 @@
       link: "/documentation/cmfive_core/introduction"
     - name: "Module Overview"
       link: "/tutorials/anatomy_module/introduction"
-    - name: "Core Modules"
+- name: "Core Modules"
+  children:
+    - name: "Introduction"
       link: "/documentation/core_modules/introduction"
-    - name: "Cmfive Tests"
+    - name: admin
+      link:
+    - name: auth
+      link:
+    - name: channels
+      link:
+    - name: favorite
+      link:
+    - name: file
+      link:
+    - name: form
+      link:
+    - name: help
+      link:
+    - name: inbox
+      link:
+    - name: install
+      link:
+    - name: main
+      link:
+    - name: report
+      link:
+    - name: search
+      link:
+    - name: tag
+      link:
+    - name: task
+      link:
+    - name: timelog
+      link:
+- name: "Cmfive Tests"
+  children:
+    - name: "Introduction"
       link: "/documentation/cmfive_tests/introduction"
+    - name: Install Codeception
+      link: "/documentation/cmfive_tests/installcodecept"
+    - name: Selenium Setup
+      link: "/documentation/cmfive_tests/installselenium"
+    - name: WebDriver Setup
+      link: "/documentation/cmfive_tests/configwebdriver"
+    - name: Enable Tests
+      link: "/documentation/cmfive_tests/enabletests"
+    - name: Running Tests
+      link:
+    - name: Writing Tests
+      link:
