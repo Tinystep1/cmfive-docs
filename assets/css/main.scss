@@ -41,7 +41,7 @@
 			@include padding(4em, 0);
 			margin: 0 auto;
 			max-width: _size(inner);
-			width: calc(100% - 6em);
+			width: calc(100% - 5em);
 
 			@include breakpoint(small) {
 				@include padding(3em, 0);
@@ -83,13 +83,19 @@
 ul {
     &.accordion {
         list-style-type: none;
-        padding: 0px; 
+		padding: 0px; 
+		text-align: right;
+
+        & > div {
+			text-align: right; 
+			padding: 5px 10px;
+		}
 
         & > li {
-            // font-size: 120%;
             padding: 5px 10px;
             font-weight: bold;
-            margin: 2px;
+			margin: 2px;
+			margin-bottom: 2%;
 
             &:hover {
                 border: 2px solid white;
@@ -105,6 +111,7 @@ ul {
                 
                 & > li {
                     padding: 0px;
+					margin-top: 3%;
                     font-size: 16px;
                     background-color: _palette(bg);
                     color: white;
@@ -113,11 +120,17 @@ ul {
                         padding: 5px 10px;
                         width: 100%;
                         display: block;
-                    }
+						color: #BDBDBD; 
+						text-decoration: none;
+					}
+					
+					& > a:hover {
+						color: white !important;
+					}
 
                     &:hover {
                         cursor: pointer;
-                        background-color: _palette(border-bg);
+						border-right: 2px solid white;
                     }
                 }
             }

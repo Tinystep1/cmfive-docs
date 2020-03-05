@@ -14,7 +14,7 @@
                 {% if page.type %}
                     {% assign page_type = page.type | append: "_menu" %}
                     <div class="row">
-                        <div class="3u 12u$(small)">
+                        <div class="4u 12u$(small)" style="padding-left: 0; padding-right:8%;">
                             <ul class="accordion">
                                 {% for parent in site.data[page_type]  %}
                                     <li>{{ parent.name }}</li>
@@ -24,21 +24,21 @@
                                         {% endfor %}
                                     </ul>
                                 {% endfor %}
+                                <div>
+                                    <br>
+                                    {% if page.typeof == "doc" %}
+                                    <a href="/documentation/getting-started">See all documentation</a>
+                                    <br>
+                                    {% endif %}
+                                    {% if page.type == "tute" %}
+                                        <a href="/documentation/getting-started">Check out the documentation</a>
+                                    {% else if page.type %}
+                                        <a href="/tutorials/getting-started">Check out the tutorials</a>
+                                    {% endif %}
+                                </div>
                             </ul>
-                            <div>
-                                {% if page.typeof == "doc" %}
-                                <a href="/documentation/getting-started">See all documentation</a>
-                                {% endif %}
-                            </div>
-                            <div>
-                                {% if page.type == "tute" %}
-                                    <a href="/documentation/getting-started">Check out the documentation</a>
-                                {% else if page.type %}
-                                    <a href="/tutorials/getting-started">Check out the tutorials</a>
-                                {% endif %}
-                            </div>
                         </div>
-                        <div class="9u 12u$(small)">
+                        <div class="8u 12u$(small)" style="padding-right: 0;"">
                 {% endif %}
                 
                 {{ content }}      
