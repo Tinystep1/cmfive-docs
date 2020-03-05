@@ -13,15 +13,18 @@
             <header class="major">
                 <h1>{{ page.landing-title }}</h1>
             </header>
-            <div class="content" style="padding-top: 50px; float: right;">
-                <p style="text-transform: uppercase;">{{ site.description }}</p>
+            <p class="spacer" style="text-transform: uppercase;">{{ site.description }}</p>
+            <div class="content" >
                 <ul class="actions">
-                    <li><a href="{{ "/documentation/getting-started.html" | absolute_url }}" class="button next scrolly">Documentation</a></li>
+                    <li><a href="{{ "/documentation/getting-started.html" | absolute_url }}"  class="button next scrolly">Documentation</a></li>
+                    <li><a href="{{ "/tutorials/getting-started.html" | absolute_url }}" class="button next scrolly">Tutorials</a></li>
+                    <li><a href="{{ "/documentation/getting-started.html" | absolute_url }}" class="button next scrolly">API Documents</a></li>
+                
                 </ul>
+              
             </div>
         </div>
     </section>
-
     {% include footer.html %}
 
 </body>

@@ -29,12 +29,19 @@
 		z-index: _misc(z-index-base);
 
 		.logo {
+			@include vendor('flex-grow', '2');
 			border: 0;
 			display: inline-block;
 			font-size: 0.8em;
 			height: inherit;
 			line-height: inherit;
-			padding: 0 1.5em;
+			padding: 0 3%;
+
+			img {
+				height: 75%;
+				vertical-align: middle;
+				padding-right: 15%;
+			}
 
 			strong {
 				@include vendor('transition', (
@@ -68,6 +75,7 @@
 			@include vendor('flex-grow', '1');
 			height: inherit;
 			line-height: inherit;
+			padding-right: 3%;
 
 			a {
 				border: 0;
