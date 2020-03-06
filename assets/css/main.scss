@@ -130,6 +130,9 @@ ul {
 
                     &:hover {
                         cursor: pointer;
+					}
+					
+                    &.active {
 						border-right: 2px solid white;
                     }
                 }

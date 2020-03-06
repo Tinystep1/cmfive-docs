@@ -17,22 +17,31 @@
                         <div class="4u 12u$(small)" style="padding-left: 0; padding-right:8%;">
                             <ul class="accordion">
                                 {% for parent in site.data[page_type]  %}
-                                    <li>{{ parent.name }}</li>
-                                    <ul class="alt">
+                                {% assign parentbar = parent.name  | remove: " " %}
+                                    <li id="{{ parentbar }}">
+                                        {{ parent.name }}
+                                    </li>
+                                    <ul  id="{{ parentbar }}" class="alt">
                                         {% for children in parent.children %}
-                                            <li><a href="{{ children.link }}">{{ children.name }}</a></li>
+                                            {% assign childbar = parentbar | append: children.name  | remove: " " %}
+                                            <li id='{{ childbar }}' >
+                                                <a href="{{ children.link }}">{{ children.name }}</a>
+                                                {% assign childlink = children.link | append: ".html" %}
+                                                {% if childlink == page.url %}
+                                                    {% assign popbarparent = parentbar %}
+                                                    {% assign popbarchild = childbar %}
+                                                {% endif %}
+                                            </li>
                                         {% endfor %}
                                     </ul>
                                 {% endfor %}
                                 <div>
-                                    <br>
-                                    {% if page.typeof == "doc" %}
-                                    <a href="/documentation/getting-started">See all documentation</a>
+                                    <br> {{ popbar1 }}
+                                    {% if page.type != "doc"%}
+                                    <a href="/documentation/getting-started">Check out the documentation</a>
                                     <br>
                                     {% endif %}
-                                    {% if page.type == "tute" %}
-                                        <a href="/documentation/getting-started">Check out the documentation</a>
-                                    {% else if page.type %}
+                                    {% if page.type != "tute" %}
                                         <a href="/tutorials/getting-started">Check out the tutorials</a>
                                     {% endif %}
                                 </div>
@@ -55,3 +64,16 @@
 </body>
 
 </html>
+
+{% if popbarparent %}
+    <script>
+        var poptopaccordion = document.evaluate("//li[@id='{{ popbarparent }}']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            if (poptopaccordion !== null) {
+                poptopaccordion.setAttribute("class", "active");
+            }
+        var popsubaccordion = document.evaluate("//li[@id='{{ popbarchild }}']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            if (popsubaccordion !== null) {
+                popsubaccordion.setAttribute("class", "active");
+            }
+    </script>
+{% endif %}

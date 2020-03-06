@@ -1,8 +1,7 @@
 ---
 title: Cmfive Boilerplate
 layout: page
-type: cm5plate
-typeof: doc
+type: doc
 ---
 
 ## Introduction

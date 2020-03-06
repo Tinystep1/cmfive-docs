@@ -1,7 +1,0 @@
-# Layout for cmfive_boilerplate menu
-
-- name: "Boilerplate"
-  children:
-      - name: Technical
-        link:
-          

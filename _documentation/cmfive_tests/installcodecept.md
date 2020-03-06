@@ -1,8 +1,7 @@
 ---
 title: Cmfive Test Framework
 layout: page
-type: cm5test
-typeof: doc
+type: doc
 ---
 
 ## Install Codeception

@@ -1,11 +1,10 @@
 ---
 title: Cmfive Test Framework
 layout: page
-type: cm5test
-typeof: doc
+type: doc
 ---
 
-## Introduction
+## Enable the Test Runner
 
 This guide assumes Codeception is installed and Selenium configured with WebDriver in place, see: [Installation](/documentation/cmfive_tests/configwebdriver).
 

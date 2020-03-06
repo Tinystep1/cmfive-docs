@@ -14,6 +14,8 @@
       link: "/documentation/cmfive_core/introduction"
     - name: "Module Overview"
       link: "/tutorials/anatomy_module/introduction"
+    - name: "API Documents"
+      link: "/apidocumentation/getting-started.html"
 - name: "Core Modules"
   children:
     - name: "Introduction"

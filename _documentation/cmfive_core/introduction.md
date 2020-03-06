@@ -1,8 +1,7 @@
 ---
 title: Cmfive Core
 layout: page
-type: cm5core
-typeof: doc
+type: doc
 ---
 
 ## Introduction

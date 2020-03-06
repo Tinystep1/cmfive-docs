@@ -1,8 +1,7 @@
 ---
 title: Cmfive Core Modules
 layout: page
-type: coremod
-typeof: doc
+type: doc
 ---
 
 ## Introduction

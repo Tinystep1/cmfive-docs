@@ -4,7 +4,7 @@ layout: page
 type: doc
 ---
 
-## Cmfive (cm5)
+## Cmfive
 
 
 Cmfive
