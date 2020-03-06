@@ -20,7 +20,12 @@
                             </span>
                         {% endif %}
                         {% if post.date %}<p>{{ post.date }}</p>{% endif %}
-                            <p>{{ post.content }}</p>
+                        <br>
+                        <div style="
+                            padding-top: 60px; 
+                            margin-bottom: 20px; 
+                            border-bottom: 1px solid white; ">
+                            {{ post.content }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
