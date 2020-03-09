@@ -13,19 +13,19 @@
     - name: "Actions"
       link: "/tutorials/anatomy_module/actions"
     - name: "Assets"
-      link: "/"
+      link: 
     - name: "Install"
       link: "/tutorials/anatomy_module/install"
     - name: "Models"
       link: "/tutorials/anatomy_module/models"
     - name: "Partials"
-      link: "/"
+      link: 
     - name: "Templates"
       link: "/tutorials/anatomy_module/templates"
     - name: "Config"
       link: "/tutorials/anatomy_module/config"
     - name: "Hooks"
-      link: "/"
+      link: 
     - name: "Roles"
-      link: "/"
+      link: 
 
