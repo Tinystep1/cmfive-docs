@@ -121,6 +121,93 @@
 			}
 		}
 
+		
+		&.navspot {
+			position: relative;
+			box-shadow: none!important;
+			height: 1.5em;
+			line-height: 1.5em;
+			font-size: 1.2em;
+			letter-spacing: .1em;
+
+			&.forward {				
+				padding-right: 3.5em;
+				padding-left: .75em;
+				border-left: solid 1px white;
+
+				&:before, &:after {
+					background-position: center right;
+					right: 1.5em;
+				}
+				
+				&:before {
+					background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" zoomAndPan="disable"><style>line { stroke: #{_palette(fg-bold)}; stroke-width: 2px; }</style><line x1="0" y1="12" x2="22" y2="12" /><line x1="13" y1="4" x2="22" y2="12.5" /><line x1="13" y1="20" x2="22" y2="11.5" /></svg>');
+				}
+
+				&:after {
+					background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" zoomAndPan="disable"><style>line { stroke: #{_palette(highlight)}; stroke-width: 2px; }</style><line x1="0" y1="12" x2="22" y2="12" /><line x1="13" y1="4" x2="22" y2="12.5" /><line x1="13" y1="20" x2="22" y2="11.5" /></svg>');
+					opacity: 0;
+					z-index: 1;
+				}
+			}
+			
+			&.backward {				
+				padding-left: 3.5em;
+				padding-right: .75em;
+				border-right: solid 1px white;
+
+				&:before, &:after {
+					background-position: center left;
+					left: 1.5em;
+				}
+				
+				&:before {
+					background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" zoomAndPan="disable"><style>line { stroke: #{_palette(fg-bold)}; stroke-width: 2px; }</style><line x1="0" y1="12" x2="22" y2="12" /><line x1="9" y1="4" x2="0" y2="12.5" /><line x1="9" y1="20" x2="0" y2="11.5" /></svg>');
+				}
+
+				&:after {
+					background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" zoomAndPan="disable"><style>line { stroke: #{_palette(highlight)}; stroke-width: 2px; }</style><line x1="0" y1="12" x2="22" y2="12" /><line x1="9" y1="4" x2="0" y2="12.5" /><line x1="9" y1="20" x2="0" y2="11.5" /></svg>');
+					opacity: 0;
+					z-index: 1;
+				}
+				}
+
+			&.scrolly:hover{
+				background: white;
+				color: #242943!important;
+				border:none;
+				box-shadow:none;
+
+				&:after{
+					filter: brightness(17%);
+				}
+			}
+
+			&:before, &:after {
+				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
+				
+				background-repeat: no-repeat;
+				background-size: 24px 24px;
+				content: '';
+				position: absolute;
+				top: 0;
+				width: 24px;
+				height: 100%;
+			}
+
+
+			&:hover, &:active {
+				&:after {
+					opacity: 1;
+				}
+			}
+
+			@include breakpoint(large) {
+				padding-right: 5em;
+			}
+		}
+
+
 		&.special {
 			background-color: _palette(fg-bold);
 			box-shadow: none;

@@ -8,14 +8,20 @@
     <div id="main" class="alt">
         <section id="one">
             <div class="inner">
-                <header class="major">
+                <header class="major wideview">
                     <h1>{{ page.title }}</h1>
                 </header>
                 {% if page.type %}
+                <div class = "button accordionpopbar">
+                    Document Navigation
+                        <img style="display: inline-block" src="/assets/images/svg/drop-down-arrow.svg">
+                </div>
                     {% assign page_type = page.type | append: "_menu" %}
                     <div class="row">
-                        <div class="4u 12u$(small)" style="padding-left: 0; padding-right:8%;">
+                        <div class="4u 12u$(small)" style="padding-left: 0; padding-right:8%;">                            
+                            
                             <ul class="accordion">
+                                {% assign grabasnext = false %}
                                 {% for parent in site.data[page_type]  %}
                                 {% assign parentbar = parent.name  | remove: " " %}
                                     <li id="{{ parentbar }}">
@@ -27,15 +33,25 @@
                                             <li id='{{ childbar }}' >
                                                 <a href="{{ children.link }}">{{ children.name }}</a>
                                                 {% assign childlink = children.link | append: ".html" %}
+                                                {% if grabasnext == true %}
+                                                    {% assign pagenextdesc = children.name %}
+                                                    {% assign pagenexthref = children.link %}
+                                                    {% assign grabasnext = false %}
+                                                {% endif %}
                                                 {% if childlink == page.url %}
                                                     {% assign popbarparent = parentbar %}
                                                     {% assign popbarchild = childbar %}
+                                                    {% assign pageprevdesc = prevtxt %}
+                                                    {% assign pageprevhref = prevlink %}
+                                                    {% assign grabasnext = true %}
                                                 {% endif %}
                                             </li>
+                                            {% assign prevtxt = children.name %}
+                                            {% assign prevlink = children.link %}
                                         {% endfor %}
                                     </ul>
                                 {% endfor %}
-                                <div>
+                                <div> 
                                     <br> {{ popbar1 }}
                                     {% if page.type != "doc"%}
                                     <a href="/documentation/getting-started">Check out the documentation</a>
@@ -48,10 +64,21 @@
                             </ul>
                         </div>
                         <div class="8u 12u$(small)" style="padding-right: 0;"">
-                {% endif %}
-                
-                {{ content }}      
-                
+                {% endif %}                
+                <header class="thinview">
+                    <h1>{{ page.title }}</h1>
+                </header>
+                {{ content }}   
+                <div class = "navclicker">
+                    {% if pageprevdesc %}
+                        <span class = "backward">{{ pageprevdesc }}</span>
+                        <a href="{{ pageprevhref }}" class="button navspot backward scrolly">back</a>
+                    {% endif %}
+                    {% if pagenextdesc %}
+                        <a href="{{ pagenexthref }}" class="button navspot forward scrolly">next</a>
+                        <span class = "forward">{{ pagenextdesc }}</span>
+                    {% endif %}
+                </div>   
                 {% if page.type %}
                         </div>
                     </div>

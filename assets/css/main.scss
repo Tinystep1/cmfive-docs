@@ -38,13 +38,19 @@
 
 	@mixin inner {
 		> .inner {
-			@include padding(4em, 0);
+			@media only screen and (min-width: 736px) {
+				@include padding(4em, 0);
+			}			
+			@media only screen and (max-width: 736px) {
+				@include padding(1em, 0);
+			}
+
 			margin: 0 auto;
 			max-width: _size(inner);
 			width: calc(100% - 5em);
 
 			@include breakpoint(small) {
-				@include padding(3em, 0);
+				//@include padding(3em, 0);
 				width: calc(100% - 3em);
 			}
 		}
@@ -80,16 +86,25 @@
 	@import 'layout/menu';
 
 // Accordion styles
+
 ul {
     &.accordion {
         list-style-type: none;
 		padding: 0px; 
 		text-align: right;
+		@media only screen and (max-width: 736px) {
+			margin-left: 20%;
+			display: none;
+		}
 
+		&.active {			
+			display: block;
+		}
         & > div {
 			text-align: right; 
 			padding: 5px 10px;
-		}
+			}
+		
 
         & > li {
             padding: 5px 10px;
@@ -155,4 +170,60 @@ ul {
             }
         }
     }
+}
+
+
+div {
+	&.accordionpopbar {	
+		min-width:100%;
+		box-shadow: none!important;
+		text-transform: none!important;	
+		height: 1.5em;
+		line-height: 1.5em;
+		font-size: 1.2em;
+		letter-spacing: .125em;	
+		text-align: right;
+		margin-top: 0px;
+		margin-bottom: 10px;
+
+
+		@media only screen and (min-width: 736px) {
+			display: none!important;
+		}			
+		@media only screen and (max-width: 736px) {
+			display: block!important;
+		}
+
+		&.popped {
+			img {
+				transform: scaleY(-1);
+			}
+		}
+	
+}
+}
+
+div {
+	&.navclicker {
+		@include vendor('display', 'flex');
+		@include vendor('flex-direction', 'row');
+		@include vendor('align-items', 'center');
+		font-weight: 200;
+		font-size: 12px;
+		line-height: 18px;
+
+		span {
+			@include vendor('flex', '1');
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			&.backward {
+				text-align: right;
+			}
+			&.forward {
+				text-align: left;
+			}
+
+			}
+	}
 }

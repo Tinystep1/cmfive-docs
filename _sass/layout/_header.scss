@@ -28,6 +28,12 @@
 		width: 100%;
 		z-index: _misc(z-index-base);
 
+		.headercaption {			
+			@media only screen and (max-width: 950px) {
+				display: none!important;	;
+			}		
+			}
+		
 		.logo {
 			@include vendor('flex-grow', '2');
 			border: 0;
@@ -68,6 +74,8 @@
 				}
 			}
 		}
+
+		
 
 		nav {
 			@include vendor('display', 'flex');

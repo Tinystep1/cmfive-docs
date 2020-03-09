@@ -13,5 +13,3 @@ It provides:
  - required PHP libraries using Composer
  - storage locations for Cmfive local data
  - tools to manage Cmfive's test framework
- 
-For detailed information, see the adjacent menu.

@@ -33,4 +33,4 @@ php cmfive-boilerplate/cmfive.php
 
 You should see new menu items added to manage tests.
 
-For more information, see the adjacent menu.
+

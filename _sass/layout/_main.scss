@@ -8,7 +8,13 @@
 
 	#main {
 		background-color: _palette(bg-alt);
-		margin: 0 8% 8% 8%;
+		
+		@media only screen and (max-width: 600px) {
+			margin: 0 1% 1% 1%;
+		}
+		@media only screen and (min-width: 600px) {
+			margin: 0 8% 8% 8%;
+		}
 
 		> * {
 			border-top: solid 1px _palette(border);

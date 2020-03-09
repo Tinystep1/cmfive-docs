@@ -34,4 +34,4 @@ vendor\bin\codecept.bat bootstrap
 
 This will set up all the placeholder file structures Cmfive uses to assemble test suites from modules.
  
-For more information, see the adjacent menu.
+

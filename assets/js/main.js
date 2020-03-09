@@ -359,6 +359,10 @@
             if(!popped) {
 				$(this).addClass('active');
 			}
+		})
+		$('.accordionpopbar').click(function(event) {
+			$(this).toggleClass('popped');
+				$('.accordion').toggleClass('active');
         })
 	});
 

@@ -46,4 +46,4 @@ This is ready to go by running:
 LaunchChromeSelenium.bat
 ```
 
-For more information, see the adjacent menu.
+

@@ -16,4 +16,6 @@ It manages:
  - abstraction of code objects into database storage
  - abstractions for users, sessions and security
  
-It is installed by a symlink from the boilerplate system folder. For detailed information, see the adjacent menu.
+It is installed by a symlink from the boilerplate system folder. 
+
+

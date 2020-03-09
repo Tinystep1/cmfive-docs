@@ -13,6 +13,37 @@
 	}
 
 	header {
+		
+		&.thinview {
+			min-width: 100%;
+			margin-top: 8px;
+			margin-bottom: 12px;
+			padding: 0;
+			
+			@media only screen and (min-width: 737px) {
+			display: none!important;
+			}			
+			@media only screen and (max-width: 736px) {
+				display: block!important;
+			}
+
+			h1 {
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 18px;
+							}
+			&:after {
+				content: '';
+				background-color: _palette(fg-bold);
+				display: block;
+				min-height: 2px;
+				max-height: 2px;
+				padding: 0;
+				width: 33%;
+				float: right;
+			}
+		}
+
 		&.major {
 			width: -moz-max-content;
 			width: -webkit-max-content;
@@ -21,6 +52,15 @@
             max-width: 100%;
 			margin-bottom: _size(element-margin);
 			float: right;
+
+			&.wideview {
+				@media only screen and (max-width: 736px) {
+				display: none!important;
+				}			
+				@media only screen and (min-width: 737px) {
+					display: block!important;
+				}
+			}
 
 			> :first-child {
                 margin-bottom: 0;

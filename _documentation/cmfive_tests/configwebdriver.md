@@ -41,4 +41,4 @@ If the file is not present, duplicate a fresh one for use from the versioned exa
 acceptance.suite.dist.yml.example
 ```
 
-For more information, see the adjacent menu.
+
