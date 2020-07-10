@@ -90,4 +90,4 @@ In the browser, navigate to the Cmfive migrations page, view by individual modul
 After runnning the migration we can verify that the table was created in the database. <br />
 To roll back we can click 'rollback to here' next to our migration. This will run the down fuction and the table will be removed.
 
-Make sure the migration is run and we can now look at creating our item model and our module service class. For details see [here](theModelsFolder).
+Make sure the migration is run and we can now look at creating our item model and our module service class. Click Next below.
