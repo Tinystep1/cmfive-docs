@@ -52,4 +52,4 @@ class ExampleItem extends DbObject {
 ```
 The model properties must be named according to the column names on the database table.
 
-Now that we have our model and service class we can start creating some actions for our module. Click Next below.
+Now that we have our model and service class we can start creating some actions for our module.

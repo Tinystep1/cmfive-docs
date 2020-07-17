@@ -26,22 +26,22 @@
       link: "/tutorials/anatomy_module/addItemTable"
     - name: "Edit Item Button"
       link: "/tutorials/anatomy_module/editItemButton"
-    - name: "Actions"
-      link: "/tutorials/anatomy_module/actions"
-    - name: "Assets"
-      link: 
-    - name: "Install"
-      link: "/tutorials/anatomy_module/install"
-    - name: "Models"
-      link: "/tutorials/anatomy_module/models"
-    - name: "Partials"
-      link: 
-    - name: "Templates"
-      link: "/tutorials/anatomy_module/templates"
-    - name: "Config"
-      link: "/tutorials/anatomy_module/config"
-    - name: "Hooks"
-      link: 
-    - name: "Roles"
-      link: 
+    #- name: "Actions"
+      #link: "/tutorials/anatomy_module/actions"
+    #- name: "Assets"
+      #link: 
+    #- name: "Install"
+      #link: "/tutorials/anatomy_module/install"
+    #- name: "Models"
+      #link: "/tutorials/anatomy_module/models"
+    #- name: "Partials"
+      #link: 
+    #- name: "Templates"
+      #link: "/tutorials/anatomy_module/templates"
+    #- name: "Config"
+      #link: "/tutorials/anatomy_module/config"
+    #- name: "Hooks"
+      #link: 
+    #- name: "Roles"
+      #link: 
 

@@ -15,4 +15,4 @@ Open templates/index.tpl.php and add the following lines.
 <?php echo $itemTable; ?>
 ```
 The item table is now visible on the idex action. Use the add new item button to add a few more items to the table.<br />
-Now we need to get our item action buttons to work properly. We will do this in the Edit Item Buttton section. Click Next below.
+Now we need to get our item action buttons to work properly. We will do this in the Edit Item Buttton section.

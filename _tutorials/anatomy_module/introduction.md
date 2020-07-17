@@ -11,5 +11,5 @@ To get started you can either create a module repository directly in the cmfive-
 The module name must be all lower case and must match the name in the module config and service class. This will be explained further. 
 
 To start your module create a new folder called 'example' in cmfive-boilerplate/modules.
-Your next step will be to generate the module config file. Click Next below.
+Your next step will be to generate the module config file. Click next to see these instructions.
 

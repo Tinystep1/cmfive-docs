@@ -102,5 +102,5 @@ function index_ALL(Web $w) {
     $w->ctx('itemTable', Html::table($table,'item_table','tablesorter',$tableHeaders));
 }
 ```
-To view the table we need to add it to the index action template file. Click Next below.
+To view the table we need to add it to the index action template file.
 
