@@ -6,7 +6,7 @@ type: tute
 
 # The Models Folder
 
-Models is where we store of class definitions. These usually relate to our database tables but also includes a module service class for holding module level functions. 
+Models is where we store class definitions. These usually relate to our database tables but also includes a module service class for holding module level functions. 
 
 Let's create our models folder, our example service class and a model for our example item. 
 
