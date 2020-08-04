@@ -18,6 +18,20 @@ By following this path, and checkting the line shown in the brackets after the p
 
 Sometimes you will want to test the logs by adding a test error to log. You can do this in your index.php file in the actions folder cmfive-boilerplate/modules/example/actions/index.php. 
 
-below your index-ALL function, you should have a line of code starting with '$w->ctx'. Inside the funtions brackets, leave a line of space below this first line of code and write '$w->Log->error("Example this is a test");'. Then save your file, and reload localhost.
+below your index-ALL function, you should have a line of code starting with '$w->ctx'. Inside the funtions brackets, leave a line of space below this first line of code and write '$w->Log->error("Example this is a test");' or copu=y the code below. Then save your file, and reload localhost.
+
+```php
+<?php
+
+function index_ALL(Web $w) {
+
+    $w-ctx("tilte", "Example Module");
+
+    $w->log->error("Example this is a test");
+    
+}
+```
 
 If you check your most recent log, you should see an error described as 'Example this is a test'.
+
+![Log error test result](/assets/images/log_example.png)
