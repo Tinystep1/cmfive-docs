@@ -8,7 +8,7 @@
       link: "/tutorials/installation"
 - name: "Logs"
   children:
-    - name: "Using The Logs"
+    - name: "Using The Log"
       link: "/tutorials/help"
 - name: "Learning Cmfive"
   children:
