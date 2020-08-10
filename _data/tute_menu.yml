@@ -9,9 +9,6 @@
 <<<<<<< Updated upstream
 =======
 - name: "Help"
-  children:
-    - name: "Using The Log"
-      link: "/tutorials/help_pages/logs"
     - name: "Set Up cmfive-core"
       link: "/tutorials/help_pages/cmfive-core-setup"
 >>>>>>> Stashed changes
