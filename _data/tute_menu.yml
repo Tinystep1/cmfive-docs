@@ -6,7 +6,7 @@
       link: "/tutorials/getting-started"
     - name: "Installation"
       link: "/tutorials/installation"
-- name: "Logs"
+- name: "Help"
   children:
     - name: "Using The Log"
       link: "/tutorials/help_module/logs"
