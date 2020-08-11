@@ -9,7 +9,7 @@
 - name: "Logs"
   children:
     - name: "Using The Log"
-      link: "/tutorials/help"
+      link: "/tutorials/help_module/logs"
 - name: "Learning Cmfive"
   children:
     - name: "Introduction"
