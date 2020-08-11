@@ -7,11 +7,11 @@
     - name: "Installation"
       link: "/tutorials/installation"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 - name: "Help"
     - name: "Set Up cmfive-core"
       link: "/tutorials/help_pages/cmfive-core-setup"
->>>>>>> Stashed changes
 - name: "Learning Cmfive"
   children:
     - name: "Introduction"
