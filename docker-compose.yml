@@ -44,7 +44,7 @@ networks:
 services:
 # Custom setup for Docker image here:
   jekyll:
-    image: jekyll/jekyll
+    image: jekyll/jekyll:4.0.1
     hostname: jekyll  
     #ports:
       #- '4000:4000'
