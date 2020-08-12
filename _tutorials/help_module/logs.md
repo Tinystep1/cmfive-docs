@@ -27,9 +27,16 @@ function index_ALL(Web $w) {
 
     $w-ctx("tilte", "Example Module");
 
-    $w->log->error("Example this is a test");
+    // Service classes should be invoked using MyService::getInstance($w), e.g.
+    LogService::getInstance($w)->error("Example This is a test");
     
 }
+```
+
+Note: You will encounter "old" ways of referencing service classes like $w->Log->error(), e.g
+
+```php
+$w->Log->error("This is an error message")
 ```
 
 If you check your most recent log, you should see an error described as 'Example this is a test'.
