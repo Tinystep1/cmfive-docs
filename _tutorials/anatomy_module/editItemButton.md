@@ -21,7 +21,10 @@ function edit_GET(Web $w) {
     //add a title to the action
 +   // change the title to reflect editing or adding a new item
 +   $w->ctx('title', !empty($p['id']) ? 'Edit item' : 'Add new item');
++   ctxService::getInstance($w)->("E'title', !empty($p['id']) ? 'Edit item' : 'Add new item'");
 -   $w->ctx('title','Add new item');
+-   ctxService::getInstance($w)->("title","Add new item");
+
     
     // this array is the form deffinition
     $formData = [
@@ -50,7 +53,9 @@ function edit_GET(Web $w) {
 +   }
     // sending the form to the 'out' function bypasses the template. 
 +   $w->out(Html::multiColForm($formData, $postUrl)); 
++   outService::getInstance($w)->(Html::multiColForm($formData, $postUrl));
 -   $w->out(Html::multiColForm($formData, 'example-item/edit')); 
+-   outService::getInstance($w)->(Html::multiColForm($formData, 'example-item/edit'));
 
 }
 ```
@@ -74,6 +79,7 @@ function edit_POST(Web $w) {
     
     // the msg (message) function redirects with a message box
     $w->msg('Item Saved', '/example');
+    msgService::getInstance($w)->("Item Saved","/example");
 }
 ```
 We can now make changes to our existing items. Test this by changing some of the values of the items in your list.
@@ -91,6 +97,7 @@ function delete_ALL(Web $w) {
     if (empty($p['id'])) {
         // if no id found use the 'error' function to redirect the use to a safe page and display a message.
         $w->error('No id found for item','example');
+        ctxService::getInstance($w)->error("No id found for item","example");
     }
     // use the id to retrieve the item
     $item = $w->Example->getItemForId($p['id']);
@@ -98,11 +105,13 @@ function delete_ALL(Web $w) {
     if (empty($item)) {
         // no item found so let the user know
         $w->error('No item found for id','example');
+        ctxService::getInstance($w)->error("No item found for id","example");
     }
     // delete the item
     $item->delete();
     // redirect the user back to the item list with a message
     $w->msg('Item deleted','example');
+    msgService::getInstance($w)->("Item deleted","example");
 }
 
 ```

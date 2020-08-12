@@ -28,6 +28,7 @@ Create a new file in the actions folder and call it 'index.php' and copy the cod
 function index_ALL(Web $w) {
     
     $w->ctx("title", "Example Module");
+    ctxService::getInstance($w)->("title","Example Module");
     
 }
 ```
