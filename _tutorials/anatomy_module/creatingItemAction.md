@@ -68,7 +68,6 @@ function edit_POST(Web $w) {
     
     // the msg (message) function redirects with a message box
     $w->msg('Item Saved', '/example');
-    msgService::getInstance($w)->("Item Saved","/example");
 }
 ```
 Now let's use our service functions to create a list of all saved items on the index action of our module.<br />
@@ -77,10 +76,9 @@ Open the index.php action file and add the code to retrieve all items from the d
 function index_ALL(Web $w) {
     
     $w->ctx("title","Example Module");
-    ctxService::getInstance($w)->("title","Example Module");
 
     // access service functions using the Web $w object and the module name
-    $exampleItems = $w->Example->getAllItems();
+    $exampleItems = ExampleService::getInstance($w)->getAllItems();
 
     // build the table array adding the headers and the row data
     $table = [];
