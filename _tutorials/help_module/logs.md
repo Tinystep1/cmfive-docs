@@ -18,7 +18,7 @@ By following this path, and checkting the line shown in the brackets after the p
 
 Sometimes you will want to test the logs by adding a test error to log. You can do this in your index.php file in the actions folder cmfive-boilerplate/modules/example/actions/index.php. 
 
-below your index_ALL function, you should have a line of code starting with '$w->ctx'. Inside the funtions brackets, leave a line of space below this first line of code and write '$w->Log->error("Example this is a test");' or copy the code below. Then save your file, and reload localhost.
+Copy the line from the code below into your index.php file.
 
 ```php
 <?php
