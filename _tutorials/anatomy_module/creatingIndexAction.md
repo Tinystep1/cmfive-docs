@@ -31,7 +31,7 @@ function index_ALL(Web $w) {
     
 }
 ```
-The code above we use the 'ctx' or context function on our Web object to set the title for our index action. Our index action is now accessable through the Cmfive UI, click on the 'Example' menu item in Cmfive to view the index action.
+In the code above we use the 'ctx' or context function on our Web object to set the title for our index action. Our index action is now accessable through the Cmfive UI. Click on the 'Example' menu item in Cmfive to view the index action.
 
-The first thing our module needs is a way to add new items to our database. Let's add a button to our index page for adding new items. Buttons and other UI elements are added using module templates. Let's add a template for our index action and create a button, then we will add more actions.
+The first thing our module needs is a way to add new items to our database. Let's add a button to our index page for adding new items. Buttons and other UI elements are added using module templates. Let's add a template for our index action and create a button. Then we will add more actions.
 
