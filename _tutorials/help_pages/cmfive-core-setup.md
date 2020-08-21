@@ -1,7 +1,7 @@
 ---
 title: cmfive-core set up
 layout: page
-type: tute
+type: help
 ---
 
 ## Set up The cmfive-core For Development
