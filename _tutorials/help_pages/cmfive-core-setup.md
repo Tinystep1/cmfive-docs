@@ -12,6 +12,10 @@ Now open your Git application, and choose to clone a repositosry from GitHub. Ma
 
 When you clone the boilerplate, it will set up a version of the cmfive-core for you. The next step is to set this up seperately in your Git application.
 
+Open your Git application choose to open a repository. Find where you cloned the boilerplate to. Go to the composer folder in boilerplate. Then click vendor, 2pisoftware, cmafive-core, and open it. 
+
+Now you'll be able to use the cmfive-core in your Git application.
+
 For live/production deployment it is expected cmfive will refuse TLS1.0&1.1 connections, for improved security.
 This may not be the case, with default setup of your web server.
 But be aware, making a change may affect very old browers' ability to connect to cmfive.
