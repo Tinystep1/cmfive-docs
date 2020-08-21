@@ -5,9 +5,7 @@ type: tute
 ---
 
 
-## Adding The Item Table to The Inex Template
-
-Adding the item table to the index template.
+## Adding The Item Table to The Index Template
 
 Open templates/index.tpl.php and add the following lines.
 ```php

@@ -7,9 +7,9 @@ type: tute
 
 ## Creating An Item Action
 
-We now have a button on our index action that directs to 'example-item/edit', check the URL to see this. Now we need to create this action and add a form for collecting and saving the item data. <br />
-Start by creating a new folder in the actions folder of our module, call this folder 'item'. This is now a submodule. Submodules are used to isolate actions that relate to a specific object or topic. This way we can easily find and manage all related actions together. <br />
-Now create a new file in our 'item' submodule and call it 'edit.php'. In this file add the definition for our action function. This time as we are going to be creating a form we will need to define two seperate functions for our GET and POST methods. 
+We now have a button on our index action that directs to 'example-item/edit'. Check the URL to see this. Now we need to create this action and add a form for collecting and saving the item data. <br />
+Start by creating a new folder in the actions folder of our module. Call this folder 'item'. This is now a submodule. Submodules are used to isolate actions that relate to a specific object or topic. This way we can easily find and manage all related actions together. <br />
+Now create a new file in our 'item' submodule and call it 'edit.php'. In this file add the definition for our action function. This time as we are going to be creating a form, we will need to define two seperate functions for our GET and POST methods. 
 ```php
 <?php
 
@@ -22,7 +22,7 @@ function edit_POST(Web $w) {
 }
 ```
 Let's continue by focussing on the GET method. <br />
-Here we need to create the form for adding new item data. For this we will be creating an array of input fields and sending them to multiColForm function from the Html class. 
+Here we need to create the form for adding new item data. For this we will be creating an array of input fields and sending them to multiColForm function from the HTML class. 
 ```php 
 function edit_GET(Web $w) {
 
@@ -33,7 +33,7 @@ function edit_GET(Web $w) {
     $formData = [
         'Item Data' =>[                         // this is a form section title
             [                                   // each array on this level represents a row on the form. This row has only a single input.
-                ['Name','text','name',''],      // this if the input field definition. [Label, type, name, value]
+                ['Name','text','name',''],      // this is the input field definition. [Label, type, name, value]
             ],
             [                                   // this row has 3 input fields.
                 ['Checked','checkbox','is_checked',0],
