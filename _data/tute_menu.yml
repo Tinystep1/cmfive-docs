@@ -8,10 +8,8 @@
       link: "/tutorials/installation"
 - name: "Help"
   children:
-    - name: "The Log"
+    - name: "Cmfive Logs"
       link: "/tutorials/help_module/logs"
-    - name: "Log error function"
-      link: "/tutorials/help_module/log-error"
 - name: "Learning Cmfive"
   children:
     - name: "Introduction"
