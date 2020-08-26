@@ -89,7 +89,7 @@ function delete_ALL(Web $w) {
     $p = $w->pathMatch('id');
     // check to see if the id has been found
     if (empty($p['id'])) {
-        // if no id found use the 'error' function to redirect the use to a safe page and display a message.
+        // if no id found use the 'error' function to redirect the user to a safe page and display a message.
         $w->error('No id found for item','example');
     }
     // use the id to retrieve the item
