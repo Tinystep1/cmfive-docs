@@ -7,7 +7,7 @@ type: tute
 
 ## Modifying The Edit Item Button
 
-If we click the 'Edit Item' button on one of our items in the table we go to the item edit action. However this action currently only creates new items. If you look at the URL you will see that the button has appended the item's id number. It's time to modify our edit action so that it looks for an item id in the URL and loads the existing item for editing or if no id is given it creates a new item. <br/>
+If we click the 'Edit Item' button on one of our items in the table we go to the item edit action. However, this action currently only creates new items. If you look at the URL you will see that the button has appended the item's id number. It's time to modify our edit action so that it looks for an item id in the URL and loads the existing item for editing or if no id is given it creates a new item. <br/>
 The following code block shows which lines need to be modified in both the GET and POST edit functions.
 ```diff
 function edit_GET(Web $w) {
