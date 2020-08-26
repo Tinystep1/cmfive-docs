@@ -23,7 +23,7 @@ function edit_GET(Web $w) {
 +   $w->ctx('title', !empty($p['id']) ? 'Edit item' : 'Add new item');
 -   $w->ctx('title','Add new item');
     
-    // this array is the form deffinition
+    // this array is the form definition
     $formData = [
         'Item Data' =>[ // this is a form section title
             [ // each array on this level represents a row on the form. This row has only a single input.
