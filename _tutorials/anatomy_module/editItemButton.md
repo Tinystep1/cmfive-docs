@@ -29,7 +29,7 @@ function edit_GET(Web $w) {
             [ // each array on this level represents a row on the form. This row has only a single input.
 +               // We now need to change the value for each field to reflect the values of the item we are editing. 
 +               ['Name','text','name',$item->name], // this is the input field definition. [Label, type, name, value]
--               ['Name','text','name',''],      // this if the input field definition. [Label, type, name, value]
+-               ['Name','text','name',''],      // this is the input field definition. [Label, type, name, value]
             ],
             [ // this row has 3 inpur fields.
 +               ['Checked','checkbox','is_checked',$item->is_checked],
