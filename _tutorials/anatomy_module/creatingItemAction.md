@@ -28,6 +28,7 @@ function edit_GET(Web $w) {
 
     //add a title to the action
     $w->ctx('title','Add new item');
+    ctxService::getInstance($w)->("title","Add new item");
 
     // this array is the form deffinition
     $formData = [
@@ -45,6 +46,7 @@ function edit_GET(Web $w) {
 
     // sending the form to the 'out' function bypasses the template. 
     $w->out(Html::multiColForm($formData, 'example-item/edit')); 
+    outService::getInstance($w)->(Html::multiColForm($formData, 'example-item/edit'));
 
 }
 ```
@@ -76,7 +78,7 @@ function index_ALL(Web $w) {
     $w->ctx("title","Example Module");
 
     // access service functions using the Web $w object and the module name
-    $exampleItems = $w->Example->getAllItems();
+    $exampleItems = ExampleService::getInstance($w)->getAllItems();
 
     // build the table array adding the headers and the row data
     $table = [];
