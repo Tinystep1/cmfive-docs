@@ -6,11 +6,8 @@ type: tute
 
 
 ## Adding The Item Table to The Index Template
-<<<<<<< HEAD
-=======
 
 Adding the item table to the index template.
->>>>>>> master
 
 Open templates/index.tpl.php and add the following lines.
 ```php
