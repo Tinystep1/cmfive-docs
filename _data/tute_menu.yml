@@ -6,6 +6,7 @@
       link: "/tutorials/getting-started"
     - name: "Installation"
       link: "/tutorials/installation"
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
@@ -14,6 +15,12 @@
       link: "/tutorials/help_pages/cmfive-core-setup"
     - name: "Set up debug"
       link: "/tutorials/help_pages/debug-setup"
+=======
+- name: "Help"
+  children:
+    - name: "Cmfive Logs"
+      link: "/tutorials/help_module/logs"
+>>>>>>> master
 - name: "Learning Cmfive"
   children:
     - name: "Introduction"
