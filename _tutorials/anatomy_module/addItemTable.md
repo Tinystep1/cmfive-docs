@@ -5,7 +5,7 @@ type: tute
 ---
 
 
-## Adding The Item Table to The Inex Template
+## Adding The Item Table to The Index Template
 
 Adding the item table to the index template.
 

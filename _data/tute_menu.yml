@@ -6,6 +6,10 @@
       link: "/tutorials/getting-started"
     - name: "Installation"
       link: "/tutorials/installation"
+- name: "Help"
+  children:
+    - name: "Cmfive Logs"
+      link: "/tutorials/help_module/logs"
 - name: "Learning Cmfive"
   children:
     - name: "Introduction"

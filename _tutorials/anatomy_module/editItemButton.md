@@ -16,12 +16,13 @@ function edit_GET(Web $w) {
 +   // we will use pathMatch to retrieve an item id from the url.
 +   $p = $w->pathMatch('id');
 +   // if the id exists we will retrieve the data for that item otherwise we will create a new item. 
-+   $item = !empty($p['id']) ? $w->Example->getItemForId($p['id']) : new ExampleItem($w);
++   $item = !empty($p['id']) ? ExampleSerive::getInstance($w)->getItemForId($p['id']) : new ExampleItem($w);
 
     //add a title to the action
 +   // change the title to reflect editing or adding a new item
 +   $w->ctx('title', !empty($p['id']) ? 'Edit item' : 'Add new item');
 -   $w->ctx('title','Add new item');
+
     
     // this array is the form deffinition
     $formData = [
@@ -50,7 +51,7 @@ function edit_GET(Web $w) {
 +   }
     // sending the form to the 'out' function bypasses the template. 
 +   $w->out(Html::multiColForm($formData, $postUrl)); 
--   $w->out(Html::multiColForm($formData, 'example-item/edit')); 
+-   $w->out(Html::multiColForm($formData, 'example-item/edit'));
 
 }
 ```
@@ -59,7 +60,7 @@ function edit_POST(Web $w) {
 
 +   // As in the GET method we need to check if we are editing an existing item.
 +   $p = $w->pathMatch('id');
-+   $item = !empty($p['id']) ? $w->Example->getItemForId($p['id']) : new ExampleItem($w);
++   $item = !empty($p['id']) ? ExampleService::getInstance($w)->getItemForId($p['id']) : new ExampleItem($w);
 -   //create a new example item object
 -   $item = new ExampleItem($w);
     
@@ -93,11 +94,12 @@ function delete_ALL(Web $w) {
         $w->error('No id found for item','example');
     }
     // use the id to retrieve the item
-    $item = $w->Example->getItemForId($p['id']);
+    $item = ExampleService::getInstance($w)->getItemForId($p['id']);
     // check to see if the item was found
     if (empty($item)) {
         // no item found so let the user know
         $w->error('No item found for id','example');
+        ctxService::getInstance($w)->error("No item found for id","example");
     }
     // delete the item
     $item->delete();
