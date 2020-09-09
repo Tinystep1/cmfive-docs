@@ -11,9 +11,7 @@ The debug is a very useful tool. It allows you to look at, and see how all the c
 To start, you need to install the correct extension.<br>
 Open Visual Studio Code and go to the extensions tab on the left. This looks like a set of four squares with the one on the top right slightly seperated from the rest. In the search bar search for PHP Debug, and click the green install button on the extension. This may take a few minutes.
 
-Once installed, you should see a new option in your left screen that looks like a play button with a small insect near the bottom left. This is the debug menu.Before it can be used however, you need a launch.json file (if you click in the Debug menu now, you will see it prompting you to create one).
-
-
+Once installed, you should see a new option in your left screen that looks like a play button with a small insect near the bottom left. This is the debug menu. Before it can be used however, you need a launch.json file. The boilerplate has one in a .vscode folder, and the Debug tool should start using this.
 
 Now open the Debug menu. You should see several sections in this menu listed as VARIABLES, WATCH, CALL STACK, and BREAKPOINTS. This last section is the only one that should have information in it, and is the one that will be explianed in this tutorial help page.
 
