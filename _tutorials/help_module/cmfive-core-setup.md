@@ -1,7 +1,7 @@
 ---
 title: cmfive-core set up
 layout: page
-type: help
+type: tute
 ---
 
 ## Set up The cmfive-core For Development
@@ -12,7 +12,9 @@ Now open your Git application, and choose to clone a repositosry from GitHub. Ma
 
 When you clone the boilerplate, it will set up a version of the cmfive-core for you. The next step is to set this up seperately in your Git application.
 
-Open your Git application choose to open a repository. Find where you cloned the boilerplate to. Go to the composer folder in boilerplate. Then click vendor, 2pisoftware, cmafive-core, and open it. 
+Open your Git application choose to open a repository. Find where you cloned the boilerplate to. Go to the composer folder in boilerplate. Then click vendor, 2pisoftware, cmfive-core, and open it. 
+
+![path to cmfive-core](/assets/images/cmfive-core_path.png)
 
 Now you'll be able to use the cmfive-core in your Git application.
 
