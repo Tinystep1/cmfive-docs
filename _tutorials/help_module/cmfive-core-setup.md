@@ -18,7 +18,7 @@ Open your Git application choose to open a repository. Find where you cloned the
 
 Now you'll be able to use the cmfive-core in your Git application.
 
-For live/production deployment it is expected cmfive will refuse TLS1.0&1.1 connections, for improved security.
+<b>Please Note:</b> For live/production deployment it is expected cmfive will refuse TLS1.0&1.1 connections, for improved security.
 This may not be the case, with default setup of your web server.
 But be aware, making a change may affect very old browers' ability to connect to cmfive.
 
