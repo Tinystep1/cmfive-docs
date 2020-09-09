@@ -11,7 +11,7 @@ The debug is a very useful tool. It allows you to look at, and see how all the c
 To start, you need to install the correct extension.<br>
 Open Visual Studio Code and go to the extensions tab on the left. This looks like a set of four squares with the one on the top right slightly seperated from the rest. In the search bar search for PHP Debug, and click the green install button on the extension. This may take a few minutes.
 
-Once installed, you should see a new option in your left screen that looks like a play button with a small insect near the bottom left. This is the debug menu.Before it can be used however, you need a launch.json file (If you click in the Debug menu now, you will see it prompting you to create one).
+Once installed, you should see a new option in your left screen that looks like a play button with a small insect near the bottom left. This is the debug menu.Before it can be used however, you need a launch.json file (if you click in the Debug menu now, you will see it prompting you to create one).
 
 
 
@@ -21,7 +21,7 @@ BREAKPOINTS will include the options Notices, Warnings, Errors, Exceptions, and 
 
 To check a piece of code, you will need to create you own breakpoint. Let's use our index.php file to practice. If you haven't yet created one, follow the turorial under the [Learning Cmfive menu](tutorials/anatomy_module/introduction).
 
-Go back to the explorer menu (picture of two pages laying on top of each other on the left, and choose your index.php file. See line 3:
+Go back to the explorer menu (picture of two pages laying on top of each other) on the left, and choose your index.php file. See line 3:
 ```php
 function index_ALL(Web $w)
 ```
@@ -31,6 +31,6 @@ You should now see a sixth option under BREAKPOINTS labeled index.php/ This shou
 
 ![BREAKPOINTS menu](/assets/images/index.php_breakpoint.png)
 
-To use the Debug hit the green play button nest to Dockelink at the top of you menu. Now reload your Example module in localhost. You will get an error once localhost hits the breakpoint you created. Now return to Visual Studion code. By using the curved arrow you can step over your first line of code and see what will be loaded next by the browser. By using the arrow pointing down you can step into your code to see what the the function does. This will take you to the page your index_ALL function calls. By comntinually stepping in, you will see all the pages the browser looks at to load your function.
+To use the Debug hit the green play button nest to DockerLink at the top of your menu. Now reload your Example module in localhost. You will get an error once localhost hits the breakpoint you created. Now return to Visual Studio Code. By using the curved arrow you can step over your first line of code and see what will be loaded next by the browser. By using the arrow pointing down you can step into your code to see what the the function does. This will take you to the page your index_ALL function calls. By comntinually stepping in, you will see all the pages the browser looks at to load your function.
 
 Once you are done, click the red stop button at the top of the docker menu. Remeber to uncheck and/or remove your break point.
