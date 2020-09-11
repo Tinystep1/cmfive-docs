@@ -4,13 +4,13 @@ layout: page
 type: tute
 ---
 
-## Set up The cmfive-core For Development
+## Set up cmfive-core For Development
 
 To start you will need to clone the cmfive-boilerplate. Go to the 2pi Software account on GitHub, and navigate to the cmfive-boilerplate. Above the repository file on the left, click the green button labelled 'Code'. Copy the link in the popup.
 
-Now open your Git application, and choose to clone a repositosry from GitHub. Make sure it will save on your device in the folder that your localhost points to. Use the copied URL in the relevant box and hit clone.
+Now open your Git application, and choose to clone a repositosry from GitHub. Make sure it will save on your device in the folder that your web server points to. Use the copied URL in the relevant box and hit clone.
 
-When you clone the boilerplate, it will set up a version of the cmfive-core for you. The next step is to set this up seperately in your Git application.
+When you clone the boilerplate, cmfive-core can be installed by following the instuctions under [Installation](/tutorials/installation). The next step is to set this up seperately in your Git application.
 
 Open your Git application choose to open a repository. Find where you cloned the boilerplate to. Go to the composer folder in boilerplate. Then click vendor, 2pisoftware, cmfive-core, and open it. 
 
@@ -33,6 +33,8 @@ eg:
 /etc/apache2/sites-available/000-default.conf:  SSLEngine on
 
 Add these entries to the files:
+```php
 SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
 SSLHonorCipherOrder on
 SSLCipherSuite "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA RC4 !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS !RC4"
+```
