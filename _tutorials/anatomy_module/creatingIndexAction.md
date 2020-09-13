@@ -16,9 +16,9 @@ function index_ALL(Web $w) {
     
 }
 ```
-The function name before the underscore must match the file name. This is followed by the method, GET, POST or ALL. Finally all actions need to be passed the Web $w object. 
+The function name before the underscore must match the file name. This is followed by the method, GET, POST or ALL. Finally, all actions need to be passed the Web $w object. 
 
-Let's create a few actions for our example module. First we will create an index action that lists all example items stored iin the database, then we'll make an 'item' submodule to hold actions for adding, editing and deleting items. 
+Let's create a few actions for our example module. First we will create an index action that lists all example items stored in the database, then we'll make an 'item' submodule to hold actions for adding, editing and deleting items. 
 
 Start by creating a floder called 'actions' in the example module folder. <br />
 Create a new file in the actions folder and call it 'index.php' and copy the code below.<br />

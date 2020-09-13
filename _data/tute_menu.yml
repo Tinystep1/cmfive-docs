@@ -8,6 +8,10 @@
       link: "/tutorials/installation"
 - name: "Help"
   children:
+    - name: "Set Up cmfive-core"
+      link: "/tutorials/help_module/cmfive-core-setup"
+    - name: "Set Up Debug"
+      link: "/tutorials/help_module/debug-setup"
     - name: "Cmfive Logs"
       link: "/tutorials/help_module/logs"
 - name: "Learning Cmfive"
