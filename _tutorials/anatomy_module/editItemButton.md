@@ -7,7 +7,7 @@ type: tute
 
 ## Modifying The Edit Item Button
 
-If we click the 'Edit Item' button on one of our items in the table we go to the item edit action. However this action currently only creates new items. If you look at the URL you will see that the button has appended the item's id number. It's time to modify our edit action so that it looks for an item id in the URL and loads the existing item for editing or if no id is given it creates a new item. <br/>
+If we click the 'Edit Item' button on one of our items in the table we go to the item edit action. However, this action currently only creates new items. If you look at the URL you will see that the button has appended the item's id number. It's time to modify our edit action so that it looks for an item id in the URL and loads the existing item for editing or if no id is given it creates a new item. <br/>
 The following code block shows which lines need to be modified in both the GET and POST edit functions.
 ```diff
 function edit_GET(Web $w) {
@@ -24,13 +24,13 @@ function edit_GET(Web $w) {
 -   $w->ctx('title','Add new item');
 
     
-    // this array is the form deffinition
+    // this array is the form definition
     $formData = [
         'Item Data' =>[ // this is a form section title
             [ // each array on this level represents a row on the form. This row has only a single input.
 +               // We now need to change the value for each field to reflect the values of the item we are editing. 
-+               ['Name','text','name',$item->name], // this if the input field definition. [Label, type, name, value]
--               ['Name','text','name',''],      // this if the input field definition. [Label, type, name, value]
++               ['Name','text','name',$item->name], // this is the input field definition. [Label, type, name, value]
+-               ['Name','text','name',''],      // this is the input field definition. [Label, type, name, value]
             ],
             [ // this row has 3 inpur fields.
 +               ['Checked','checkbox','is_checked',$item->is_checked],
@@ -90,7 +90,7 @@ function delete_ALL(Web $w) {
     $p = $w->pathMatch('id');
     // check to see if the id has been found
     if (empty($p['id'])) {
-        // if no id found use the 'error' function to redirect the use to a safe page and display a message.
+        // if no id found use the 'error' function to redirect the user to a safe page and display a message.
         $w->error('No id found for item','example');
     }
     // use the id to retrieve the item
