@@ -19,22 +19,21 @@ Config::append("email", [
     "layer" => "aws",
 ]);
 Config::set("admin.mail.aws", [
-   "credentials" => [
-       "key"    => "IAM_KEY",
-       "secret" => "IAM_SECRET",
-   ],
    "queue_url" => "SQS_QUEUE_URL",
    "region"    => "SQS_QUEUE_REGION",
 ]);
 ```
-2. If you're developing on Cmfive locally, also add the following line.
+2. If you're developing on Cmfive locally, also add the following. <b>Note</b>, when system.environment is set to production <ins>[AWS IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)</ins> must be used to authenticate with AWS as this is best practice for security.
 ```php
+Config::set("admin.mail.aws.credentials", [
+    "key"    => "IAM_KEY",
+    "secret" => "IAM_SECRET",
+]);
 Config::set("system.environment", "development");
 ```
-3. Replace <b>SQS_QUEUE_URL</b> and <b>SQS_QUEUE_REGION</b> with their respective values.
-4. If you did step 2 replace <b>IAM_KEY</b> and <b>IAM_SECRET</b> with their respective values. When system.environment is not set to development the AWS Transport will use <ins>[AWS IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)</ins> to authenticate as this is best practice for production systems.
-5. Make sure to clear your config cache to apply your changes.
-6. Clone the Cmfive-Mail-Service-CDK <ins>[repository](https://github.com/2pisoftware/Cmfive-Mail-Service-CDK)</ins> and follow the steps outlined in the README.md file to deploy the CDK stack.
+3. Replace <b>SQS_QUEUE_URL</b> and <b>SQS_QUEUE_REGION</b> with their respective values as well as <b>IAM_KEY</b> and <b>IAM_SECRET</b> if system.environment is set to development.
+4. Make sure to clear your config cache to apply your changes.
+5. Clone the Cmfive-Mail-Service-CDK <ins>[repository](https://github.com/2pisoftware/Cmfive-Mail-Service-CDK)</ins> and follow the steps outlined in the README.md file to deploy the CDK stack.
 
 ## SwiftMailer Transport
 

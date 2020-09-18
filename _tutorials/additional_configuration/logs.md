@@ -23,12 +23,16 @@ Config::set("admin.logging", [
             "stream_name_app" => "APP_NAME",
             "region"          => "CLOUDWATCH_REGION",
             "version"         => "latest",
-            "credentials"     => [
-                "key"    => "IAM_KEY",
-                "secret" => "IAM_SECRET"
-            ]
         ]
 ]);
 ```
-2. Replace <b>RETENTION_PERIOD</b>, <b>GROUP_NAME</b>, <b>APP_NAME</b>, <b>CLOUDWATCH_REGION</b>, <b>IAM_KEY</b> and <b>IAM_SECRET</b> with their respective values.
-3. Make sure to clear your config cache to apply your changes.
+2. If you're developing on Cmfive locally, also add the following. <b>Note</b>, when system.environment is set to production <ins>[AWS IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)</ins> must be used to authenticate with AWS as this is best practice for security.
+```php
+Config::set("admin.logging.cloudwatch.credentials", [
+    "key"    => "IAM_KEY",
+    "secret" => "IAM_SECRET",
+]);
+Config::set("system.environment", "development");
+```
+3. Replace <b>RETENTION_PERIOD</b>, <b>GROUP_NAME</b>, <b>APP_NAME</b>, <b>CLOUDWATCH_REGION</b> with their respective values as well as <b>IAM_KEY</b> and <b>IAM_SECRET</b> if system.environment is set to development.
+4. Make sure to clear your config cache to apply your changes.
