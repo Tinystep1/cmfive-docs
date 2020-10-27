@@ -66,3 +66,7 @@
       link:
     - name: Writing Tests
       link:
+- name: "Cloud Provider Integration"
+  children:
+    - name: "Amazon Web Services (AWS)"
+      link: "/documentation/cmfive_cloud_provider_integration/aws"
