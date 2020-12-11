@@ -9,59 +9,59 @@
 - name: "The Anatomy of Cmfive"
   children:
     - name: "The Boilerplate"
-      link: "/documentation/cmfive-boilerplate/introduction"
+      link: "/documentation/cmfive_boilerplate/introduction"
     - name: "The Cmfive Core"
-      link: "/documentation/cmfive-core/introduction"
+      link: "/documentation/cmfive_core/introduction"
     - name: "Module Overview"
-      link: "/tutorials/module-anatomy/introduction"
+      link: "/tutorials/anatomy_module/introduction"
     - name: "API Documents"
-      link: "/api/getting-started.html"
+      link: "/apidocumentation/getting-started.html"
 - name: "Core Modules"
   children:
     - name: "Introduction"
-      link: "/documentation/core-modules/introduction"
-    - name: Admin
+      link: "/documentation/core_modules/introduction"
+    - name: admin
       link:
-    - name: Auth
+    - name: auth
       link:
-    - name: Channels
+    - name: channels
       link:
-    - name: Favorite
+    - name: favorite
       link:
-    - name: File
+    - name: file
       link:
-    - name: Form
+    - name: form
       link:
-    - name: Help
+    - name: help
       link:
-    - name: Inbox
+    - name: inbox
       link:
-    - name: Install
+    - name: install
       link:
-    - name: Main
+    - name: main
       link:
-    - name: Report
-      link: "/documentation/core-modules/report/report"
-    - name: Search
+    - name: report
       link:
-    - name: Tag
+    - name: search
       link:
-    - name: Task
+    - name: tag
       link:
-    - name: Timelog
+    - name: task
+      link:
+    - name: timelog
       link:
 - name: "Cmfive Tests"
   children:
     - name: "Introduction"
-      link: "/documentation/cmfive-tests/introduction"
+      link: "/documentation/cmfive_tests/introduction"
     - name: Install Codeception
-      link: "/documentation/cmfive-tests/install-codecept"
+      link: "/documentation/cmfive_tests/installcodecept"
     - name: Selenium Setup
-      link: "/documentation/cmfive-tests/install-selenium"
+      link: "/documentation/cmfive_tests/installselenium"
     - name: WebDriver Setup
-      link: "/documentation/cmfive-tests/config-web-driver"
+      link: "/documentation/cmfive_tests/configwebdriver"
     - name: Enable Tests
-      link: "/documentation/cmfive-tests/enable-tests"
+      link: "/documentation/cmfive_tests/enabletests"
     - name: Running Tests
       link:
     - name: Writing Tests
@@ -69,4 +69,4 @@
 - name: "Cloud Provider Integration"
   children:
     - name: "Amazon Web Services (AWS)"
-      link: "/documentation/cmfive-cloud-provider-integration/aws"
+      link: "/documentation/cmfive_cloud_provider_integration/aws"

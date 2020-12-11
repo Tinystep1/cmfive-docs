@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 {% include head.html %}
+
 <body>
-    {% include header.html %}
+    {% include header.html %} 
     <div id="main" class="alt">
         <section id="one">
             <div class="inner">
@@ -16,7 +18,8 @@
                 </div>
                     {% assign page_type = page.type | append: "_menu" %}
                     <div class="row">
-                        <div class="4u 12u$(small)" style="padding-left: 0; padding-right:8%;">
+                        <div class="4u 12u$(small)" style="padding-left: 0; padding-right:8%;">                            
+                            
                             <ul class="accordion">
                                 {% assign grabasnext = false %}
                                 {% for parent in site.data[page_type]  %}
@@ -48,7 +51,7 @@
                                         {% endfor %}
                                     </ul>
                                 {% endfor %}
-                                <div>
+                                <div> 
                                     <br> {{ popbar1 }}
                                     {% if page.type != "doc"%}
                                     <a href="/documentation/getting-started">Check out the documentation</a>
@@ -61,11 +64,11 @@
                             </ul>
                         </div>
                         <div class="8u 12u$(small)" style="padding-right: 0;"">
-                {% endif %}
+                {% endif %}                
                 <header class="thinview">
                     <h1>{{ page.title }}</h1>
                 </header>
-                {{ content }}
+                {{ content }}   
                 <div class = "navclicker">
                     {% if pageprevdesc %}
                         <span class = "backward">{{ pageprevdesc }}</span>
@@ -75,7 +78,7 @@
                         <a href="{{ pagenexthref }}" class="button navspot forward scrolly">next</a>
                         <span class = "forward">{{ pagenextdesc }}</span>
                     {% endif %}
-                </div>
+                </div>   
                 {% if page.type %}
                         </div>
                     </div>
@@ -83,9 +86,12 @@
             </div>
         </section>
     </div>
+    
     {% include footer.html %}
 </body>
+
 </html>
+
 {% if popbarparent %}
     <script>
         var poptopaccordion = document.evaluate("//li[@id='{{ popbarparent }}']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
