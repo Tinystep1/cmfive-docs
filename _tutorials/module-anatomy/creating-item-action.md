@@ -27,7 +27,6 @@ function edit_GET(Web $w)
 {
     //add a title to the action
     $w->ctx('title','Add new item');
-    ctxService::getInstance($w)->("title","Add new item");
 
     // this array is the form definition
     $formData = [
@@ -44,9 +43,7 @@ function edit_GET(Web $w)
     ];
 
     // sending the form to the 'out' function bypasses the template.
-    $w->out(Html::multiColForm($formData, 'example-item/edit'));
-    outService::getInstance($w)->(Html::multiColForm($formData, 'example-item/edit'));
-
+    $w->out(Html::multiColForm($formData, 'edit'));
 }
 ```
 Now that we have the form, let's add to the POST function where we will save the data to the database.
