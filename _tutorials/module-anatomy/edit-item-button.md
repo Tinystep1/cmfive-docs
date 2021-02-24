@@ -97,7 +97,6 @@ function delete_ALL(Web $w)
     if (empty($item)) {
         // no item found so let the user know
         $w->error('No item found for id','example');
-        ctxService::getInstance($w)->error("No item found for id","example");
     }
     // delete the item
     $item->delete();
